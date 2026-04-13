@@ -4,19 +4,36 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    background-color: #d3dfaa;
+    background-color: #fff;
 }
 
+:root {
+    --verde: #1D9E75;
+    --verde-escuro: #085041;
+    --verde-claro: #E1F5EE;
+    --verde-medio: #5DCAA5;
+    --cinza-bg: #f7f7f5;
+    --cinza-borda: #e0dfd8;
+    --texto: #1a1a18;
+    --texto-muted: #5f5e5a;
+}
+
+
 header {
-    background-color: rgb(98, 141, 43);
+    background-color: #085041;
     color: #ffffff;
     padding: 15px 0;
     font-size: 1.6rem;
     font-weight: bold;
 }
+/* CALEA TITULO DEIXA NEUTRO*/
+header a {
+    color: inherit;
+    text-decoration: none;
+}
 
 nav {
-    background-color: rgb(205, 253, 142);
+    background-color: #1D9E75;
     padding: 12px 0;
 }
 
@@ -84,4 +101,20 @@ nav a:hover,
         box-shadow: none;
         width: 100%;
     }
+}
+
+
+footer {
+    background: var(--verde-escuro);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.875rem;
+}
+
+footer strong { color: var(--verde-medio); }
+
+@media (max-width: 680px) {
+    .sobre-grid { grid-template-columns: 1fr; }
+    nav { display: none; }
 }
