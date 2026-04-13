@@ -106,7 +106,7 @@ nav a:hover,
 
 footer {
     background: var(--verde-escuro);
-    color: rgba(255,255,255,0.6);
+    color: #ffffff;
     text-align: center;
     padding: 2rem;
     font-size: 0.875rem;
