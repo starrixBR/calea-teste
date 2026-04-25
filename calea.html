@@ -3,68 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Acadêmico — CALEA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <title>CALEA</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .gestao-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(175px,1fr)); gap:1rem; }
-        .membro-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; padding:1.5rem 1rem; text-align:center; }
-        .membro-card h4 { font-family:'Syne',sans-serif; font-size:.92rem; font-weight:700; margin-bottom:.2rem; }
-        .membro-card .cargo { font-size:.78rem; color:var(--verde); font-weight:600; }
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
 
-        .doc-list { display:grid; gap:.75rem; max-width:640px; }
-        .doc-item { display:flex; align-items:center; justify-content:space-between; padding:1rem 1.25rem; background:var(--bg-white); border:1px solid var(--borda); border-radius:12px; gap:1rem; }
-        .doc-item-info { display:flex; align-items:center; gap:.75rem; }
-        .doc-item-info .doc-icon { font-size:1.2rem; }
-        .doc-item-info h4 { font-size:.9rem; font-weight:600; }
-        .doc-item-info p { font-size:.78rem; color:var(--texto-muted); }
-
-        .contato-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
-        .contato-item { display:flex; align-items:flex-start; gap:.75rem; padding:1.25rem; background:var(--bg-white); border:1px solid var(--borda); border-radius:12px; }
-        .contato-icon { width:38px; height:38px; border-radius:9px; background:var(--verde-claro); display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
-        .contato-info .label { font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.09em; color:var(--texto-muted); margin-bottom:.2rem; }
-        .contato-info .valor { font-size:.9rem; color:var(--verde-escuro); font-weight:500; }
-        .contato-info a { color:var(--verde-escuro); text-decoration:none; }
-        .contato-info a:hover { color:var(--verde); }
-
-        .steps { counter-reset:step; display:grid; gap:1rem; max-width:600px; }
-        .step { display:flex; gap:1rem; align-items:flex-start; padding:1.1rem 1.25rem; background:var(--bg-white); border:1px solid var(--borda); border-radius:12px; }
-        .step-n { width:32px; height:32px; border-radius:50%; background:var(--verde-claro); color:var(--verde-escuro); font-family:'Syne',sans-serif; font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-        .step h4 { font-size:.9rem; font-weight:600; margin-bottom:.2rem; }
-        .step p { font-size:.85rem; color:var(--texto-muted); }
-    </style>
 </head>
 <body>
+    <header>
+        <h1>
+            <a href="index.html">Boas-vindas ao<br>CALEA</a>
+        </h1>
+        
+    <div class="hero-tag">Centro Acadêmico <br>de Línguas Estrangeiras APLICADAS <br>ao Multilinguismo e à Sociedade da Informação</div>
+    </header>
 
-<header id="site-header"></header>
 
-<div class="page-hero">
-    <div class="page-hero-inner">
-        <span class="page-tag">Centro Acadêmico</span>
-        <h1>CALEA</h1>
-        <p>O Centro Acadêmico do LEA-MSI — representando os estudantes desde a fundação do curso.</p>
-    </div>
-</div>
+    <nav>
+        <a href="index.html">PÁGINA INICIAL</a>
+        <a href="sobre_o_curso.html">SOBRE O CURSO</a>
+        <a href="espaco_leador.html">ESPAÇO DO LEADOR</a>
+        <a href="oportunidades.html">OPORTUNIDADES</a>
+        <a href="calea.html">CENTRO ACADÊMICO (CALEA)</a>
+        <a href="projetos_eventos.html">PROJETOS E EVENTOS</a>
+        <a href="egressos.html">EGRESSOS</a>
+        <a href="comunidade.html">COMUNIDADE</a>
 
-<main>
+    </nav>
 
-    <!-- O QUE É O CA -->
-    <section class="bg-white">
-        <div class="container">
-            <p class="sec-label">Sobre nós</p>
-            <h2 class="sec-title">O que é o CALEA?</h2>
-            <p style="color:var(--texto-muted); max-width:680px; font-size:.95rem; margin-bottom:1rem;">
-                O CALEA é o Centro Acadêmico do curso de Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação (LEA-MSI). Somos a entidade representativa dos estudantes, atuando na defesa dos direitos acadêmicos, na organização de eventos e na promoção de uma vida universitária rica e participativa.
-            </p>
-            <div class="cards-grid" style="margin-top:2rem;">
-                <div class="card"><div class="card-icon">🏛️</div><h3>Representação</h3><p>Representamos os alunos perante a coordenação, o departamento e instâncias superiores da universidade.</p></div>
-                <div class="card"><div class="card-icon">🎉</div><h3>Eventos e Projetos</h3><p>Organizamos eventos culturais, acadêmicos e sociais que fortalecem o senso de comunidade do curso.</p></div>
-                <div class="card"><div class="card-icon">📢</div><h3>Comunicação</h3><p>Mantemos os alunos informados sobre tudo que acontece no curso, na universidade e no CA.</p></div>
-                <div class="card"><div class="card-icon">🤝</div><h3>Apoio</h3><p>Auxiliamos alunos com dúvidas acadêmicas, procedimentos e encaminhamento de demandas.</p></div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <h1>O que é o CA?</h1>
+        <p>Conteúdo sobre o que é o CA.</p>
 
     <!-- GESTÃO ATUAL -->
     <section>
@@ -107,112 +75,52 @@
         </div>
     </section>
 
-    <!-- ESTATUTO E ATAS -->
-    <section class="bg-white">
-        <div class="container">
-            <p class="sec-label">Transparência</p>
-            <h2 class="sec-title">Documentos</h2>
-            <p class="sec-desc">Acesse o estatuto do CALEA e as atas das reuniões da gestão.</p>
-            <div class="doc-list">
-                <div class="doc-item">
-                    <div class="doc-item-info">
-                        <span class="doc-icon">📄</span>
-                        <div><h4>Estatuto do CALEA</h4><p>Versão atualizada · 2024</p></div>
-                    </div>
-                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem; white-space:nowrap;">Baixar PDF</a>
-                </div>
-                <div class="doc-item">
-                    <div class="doc-item-info">
-                        <span class="doc-icon">📋</span>
-                        <div><h4>Ata — Abril 2025</h4><p>Reunião ordinária</p></div>
-                    </div>
-                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem; white-space:nowrap;">Baixar PDF</a>
-                </div>
-                <div class="doc-item">
-                    <div class="doc-item-info">
-                        <span class="doc-icon">📋</span>
-                        <div><h4>Ata — Março 2025</h4><p>Reunião ordinária</p></div>
-                    </div>
-                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem; white-space:nowrap;">Baixar PDF</a>
-                </div>
-                <div class="doc-item">
-                    <div class="doc-item-info">
-                        <span class="doc-icon">📋</span>
-                        <div><h4>Ata — Fevereiro 2025</h4><p>Reunião de posse da gestão</p></div>
-                    </div>
-                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem; white-space:nowrap;">Baixar PDF</a>
+        <h2>Estatuto</h2>
+        <p>Conteúdo sobre estatuto.</p>
+
+        <h2>Atas de reuniões</h2>
+        <p>Conteúdo sobre atas de reuniões.</p>
+
+        <h2>Como participar</h2>
+        <p>Conteúdo sobre como participar.</p>
+
+        <h2>Contato</h2>
+        <p>Conteúdo sobre contato.</p>
+
+        <h2>Redes sociais</h2>
+        <p>Conteúdo sobre redes sociais.</p>
+
+        <h2>Onde fica o CALEA?</h2>
+        <p>Conteúdo sobre a localização do CALEA.</p>
+    </main>
+
+        <!--duvidas frequentes-->
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">Dúvidas frequentes</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                        <p>bbbbbbbbb</p>
+                    </details>
+                    <details>
+                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                        <p>bbbbbbbbb</p>
+                    </details>
+                    <details>
+                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                        <p>bbbbbbbbb</p>
+                    </details>
+                    <details>
+                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                        <p>bbbbbbbbb</p>
+                    </details>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- COMO PARTICIPAR -->
-    <section>
-        <div class="container">
-            <p class="sec-label">Faça parte</p>
-            <h2 class="sec-title">Como participar</h2>
-            <p class="sec-desc">Qualquer aluno do LEA-MSI pode se envolver com o CALEA. Veja como.</p>
-            <div class="steps">
-                <div class="step"><div class="step-n">1</div><div><h4>Apareça em uma reunião aberta</h4><p>As reuniões ordinárias são abertas a todos os alunos. As datas são divulgadas nas nossas redes.</p></div></div>
-                <div class="step"><div class="step-n">2</div><div><h4>Entre em contato com a gestão</h4><p>Mande mensagem pelo Instagram ou WhatsApp e manifeste seu interesse em participar.</p></div></div>
-                <div class="step"><div class="step-n">3</div><div><h4>Colabore com projetos e eventos</h4><p>Mesmo sem cargo formal, você pode ajudar na organização de eventos e iniciativas do CA.</p></div></div>
-                <div class="step"><div class="step-n">4</div><div><h4>Candidate-se na época das eleições</h4><p>Todo ano letivo acontece a eleição para a nova gestão. Forme uma chapa e concorra!</p></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section class="bg-white">
-        <div class="container">
-            <p class="sec-label">Fale conosco</p>
-            <h2 class="sec-title">Contato e redes sociais</h2>
-            <p class="sec-desc">Tem alguma dúvida, sugestão ou demanda? A gente responde.</p>
-            <div class="contato-grid">
-                <div class="contato-item">
-                    <div class="contato-icon">✉️</div>
-                    <div class="contato-info"><p class="label">E-mail</p><p class="valor"><a href="mailto:calea@email.com">calea@email.com</a></p></div>
-                </div>
-                <div class="contato-item">
-                    <div class="contato-icon">📸</div>
-                    <div class="contato-info"><p class="label">Instagram</p><p class="valor"><a href="#">@calea_oficial</a></p></div>
-                </div>
-                <div class="contato-item">
-                    <div class="contato-icon">💬</div>
-                    <div class="contato-info"><p class="label">WhatsApp</p><p class="valor">(XX) XXXXX-XXXX</p></div>
-                </div>
-                <div class="contato-item">
-                    <div class="contato-icon">📍</div>
-                    <div class="contato-info"><p class="label">Localização</p><p class="valor">Bloco X, sala XXX — Campus</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section>
-        <div class="container">
-            <p class="sec-label">Dúvidas frequentes</p>
-            <h2 class="sec-title">Perguntas sobre o CA</h2>
-            <div class="faq-wrap">
-                <details>
-                    <summary>Todo aluno do LEA é automaticamente associado ao CALEA?<span class="faq-icon">+</span></summary>
-                    <p>Sim. Todo aluno regularmente matriculado no curso é automaticamente representado pelo CALEA, sem necessidade de associação formal.</p>
-                </details>
-                <details>
-                    <summary>Como funciona a eleição para a gestão?<span class="faq-icon">+</span></summary>
-                    <p>As eleições acontecem anualmente. Qualquer aluno pode formar uma chapa, inscrever candidatura e concorrer. O processo é democrático e aberto.</p>
-                </details>
-                <details>
-                    <summary>O CALEA pode me ajudar com problemas com professores ou a coordenação?<span class="faq-icon">+</span></summary>
-                    <p>Sim. O CA pode intermediar conflitos e encaminhar demandas de alunos junto à coordenação do curso, sempre respeitando os canais institucionais.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer id="site-footer"></footer>
-<script src="shared.js"></script>
+    <footer>
+        <a><strong>CALEA</strong>  aaaaaaaaaaaaaaaaaaaaaaaaaaaa.</a>
+    </footer>
 </body>
 </html>
