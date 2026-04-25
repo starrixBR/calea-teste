@@ -3,79 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALEA</title>
+    <title>Sobre o Curso — CALEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
+    <style>
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        @media(max-width:700px){ .two-col { grid-template-columns:1fr; } }
+
+        .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+        .stat-box { background: var(--verde-claro); border-radius: 12px; padding: 1.25rem; text-align: center; }
+        .stat-n { font-family:'Syne',sans-serif; font-size:1.8rem; font-weight:800; color:var(--verde-escuro); }
+        .stat-l { font-size:0.78rem; font-weight:600; color:var(--verde); margin-top:2px; }
+
+        .idiomas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:1rem; }
+        .idioma-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:12px; padding:1.25rem; text-align:center; }
+        .idioma-flag { font-size:2rem; margin-bottom:0.5rem; }
+        .idioma-card h4 { font-family:'Syne',sans-serif; font-size:0.9rem; font-weight:700; }
+        .idioma-card p { font-size:0.8rem; color:var(--texto-muted); margin-top:3px; }
+
+        .fluxo-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+        .fluxo-item { background:var(--bg-white); border:1px solid var(--borda); border-left:3px solid var(--verde); border-radius:0 12px 12px 0; padding:1rem 1.25rem; }
+        .fluxo-item .periodo { font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--verde); margin-bottom:.3rem; }
+        .fluxo-item h4 { font-family:'Syne',sans-serif; font-size:0.9rem; font-weight:700; }
+
+        .diff-list { list-style:none; }
+        .diff-list li { display:flex; gap:.75rem; align-items:flex-start; padding:.75rem 0; border-bottom:1px solid var(--borda); font-size:.9rem; color:var(--texto-muted); }
+        .diff-list li::before { content:'✓'; color:var(--verde); font-weight:700; flex-shrink:0; margin-top:1px; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <a href="index.html">Boas-vindas ao<br>CALEA</a>
-        </h1>
-        
-    <div class="hero-tag">Centro Acadêmico <br>de Línguas Estrangeiras APLICADAS <br>ao Multilinguismo e à Sociedade da Informação</div>
-    </header>
 
+<header id="site-header"></header>
 
-    <nav>
-        <a href="index.html">PÁGINA INICIAL</a>
-        <a href="sobre_o_curso.html">SOBRE O CURSO</a>
-        <a href="espaço_leador.html">ESPAÇO DO LEADOR</a>
-        <a href="calea.html">CENTRO ACADÊMICO (CALEA)</a>
-        <a href="projetos_eventos.html">PROJETOS E EVENTOS</a>
-        <a href="egressos.html">EGRESSOS</a>
-        <a href="comunidade.html">COMUNIDADE</a>
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <span class="page-tag">O Curso</span>
+        <h1>Línguas Estrangeiras Aplicadas<br>ao Multilinguismo e à SI</h1>
+        <p>Conheça a estrutura, os objetivos e os diferenciais do LEA-MSI.</p>
+    </div>
+</div>
 
-    </nav>
+<main>
 
-    <main>
-        <h1>O que é o LEA?</h1>
-        <p>Conteúdo sobre o que é o LEA.</p>
-
-        <h2>Duração do curso</h2>
-        <p>Conteúdo sobre duração do curso.</p>
-
-        <h2>Estrutura curricular</h2>
-        <h3>Disciplinas</h3>
-        <p>Conteúdo sobre disciplinas.</p>
-        <h3>Fluxo sugerido</h3>
-        <p>Conteúdo sobre fluxo sugerido.</p>
-
-        <h2>Objetivo da formação</h2>
-        <p>Conteúdo sobre objetivo da formação.</p>
-
-        <h2>Diferenciais do curso</h2>
-        <p>Conteúdo sobre diferenciais do curso.</p>
-
-    </main>
-
-        <!--duvidas frequentes-->
-        <section id="faq">
-            <div class="container">
-                <h2 class="section-title">Dúvidas frequentes</h2>
-                <div class="faq-list">
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
+    <!-- O QUE É -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <p class="sec-label">O que é o LEA?</p>
+                    <h2 class="sec-title">Um curso único e interdisciplinar</h2>
+                    <p style="color:var(--texto-muted); margin-bottom:1rem; font-size:.95rem;">
+                        O LEA-MSI (Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação) é um curso de graduação que combina o domínio de múltiplas línguas estrangeiras com competências em tecnologia da informação, comunicação e relações internacionais.
+                    </p>
+                    <p style="color:var(--texto-muted); font-size:.95rem;">
+                        Diferente dos cursos tradicionais de Letras ou de TI, o LEA-MSI forma profissionais com perfil híbrido, capazes de atuar em ambientes globais, multiculturais e digitais.
+                    </p>
+                </div>
+                <div class="stat-row" style="margin-bottom:0;">
+                    <div class="stat-box"><div class="stat-n">4</div><div class="stat-l">Anos de curso</div></div>
+                    <div class="stat-box"><div class="stat-n">3+</div><div class="stat-l">Línguas estudadas</div></div>
+                    <div class="stat-box"><div class="stat-n">100%</div><div class="stat-l">Presencial</div></div>
+                    <div class="stat-box"><div class="stat-n">∞</div><div class="stat-l">Possibilidades</div></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    <footer>
-        <a><strong>CALEA</strong>  aaaaaaaaaaaaaaaaaaaaaaaaaaaa.</a>
-    </footer>
+    <!-- DURAÇÃO E IDIOMAS -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Idiomas</p>
+            <h2 class="sec-title">Línguas do curso</h2>
+            <p class="sec-desc">O curso oferece formação aprofundada em três línguas estrangeiras, com possibilidade de escolha de ênfases.</p>
+            <div class="idiomas-grid">
+                <div class="idioma-card"><div class="idioma-flag">🇬🇧</div><h4>Inglês</h4><p>Obrigatório · Todos os semestres</p></div>
+                <div class="idioma-card"><div class="idioma-flag">🇫🇷</div><h4>Francês</h4><p>Obrigatório · Todos os semestres</p></div>
+                <div class="idioma-card"><div class="idioma-flag">🇪🇸</div><h4>Espanhol</h4><p>Obrigatório · Todos os semestres</p></div>
+                <div class="idioma-card"><div class="idioma-flag">🌐</div><h4>Optativas</h4><p>Alemão, Italiano, Árabe, Japonês…</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLUXO CURRICULAR -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Estrutura curricular</p>
+            <h2 class="sec-title">Fluxo sugerido</h2>
+            <p class="sec-desc">O curso é dividido em oito semestres com progressão gradual nas línguas e nas disciplinas de tecnologia e cultura.</p>
+            <div class="fluxo-grid">
+                <div class="fluxo-item"><div class="periodo">1º–2º semestre</div><h4>Fundamentos linguísticos e introdução à SI</h4></div>
+                <div class="fluxo-item"><div class="periodo">3º–4º semestre</div><h4>Aprofundamento nas línguas e culturas</h4></div>
+                <div class="fluxo-item"><div class="periodo">5º–6º semestre</div><h4>Línguas aplicadas e tecnologia da informação</h4></div>
+                <div class="fluxo-item"><div class="periodo">7º–8º semestre</div><h4>TCC, estágio e optativas avançadas</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJETIVO E DIFERENCIAIS -->
+    <section>
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <p class="sec-label">Objetivo da formação</p>
+                    <h2 class="sec-title">O que você vai aprender</h2>
+                    <p style="color:var(--texto-muted); font-size:.95rem; margin-bottom:1rem;">
+                        O LEA-MSI forma profissionais com capacidade de comunicação avançada em múltiplos idiomas, aliada ao entendimento crítico da sociedade da informação e de suas ferramentas digitais.
+                    </p>
+                    <p style="color:var(--texto-muted); font-size:.95rem;">
+                        O egresso está apto a atuar em empresas transnacionais, organismos internacionais, setor público, comunicação, ensino e tecnologia.
+                    </p>
+                </div>
+                <div>
+                    <p class="sec-label">Diferenciais do curso</p>
+                    <h2 class="sec-title">Por que escolher o LEA?</h2>
+                    <ul class="diff-list">
+                        <li>Formação simultânea em três línguas estrangeiras</li>
+                        <li>Perfil híbrido: humanidades + tecnologia</li>
+                        <li>Possibilidade de mobilidade internacional</li>
+                        <li>Corpo docente especializado e atuante</li>
+                        <li>Rede de egressos em áreas diversas</li>
+                        <li>Projeto pedagógico atualizado e inovador</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Dúvidas frequentes</p>
+            <h2 class="sec-title">Perguntas sobre o curso</h2>
+            <div class="faq-wrap">
+                <details>
+                    <summary>O LEA-MSI é um curso de Letras?<span class="faq-icon">+</span></summary>
+                    <p>Não exatamente. Embora compartilhe características com os cursos de Letras, o LEA-MSI tem identidade própria, com forte componente de tecnologia da informação e atuação profissional em contextos internacionais e digitais.</p>
+                </details>
+                <details>
+                    <summary>Preciso saber os idiomas antes de entrar?<span class="faq-icon">+</span></summary>
+                    <p>Não é obrigatório, mas um nível básico em pelo menos um dos idiomas ajuda bastante na adaptação ao primeiro semestre. O curso começa do básico em cada língua.</p>
+                </details>
+                <details>
+                    <summary>Quais são as saídas profissionais?<span class="faq-icon">+</span></summary>
+                    <p>Tradução e interpretação, relações internacionais, tecnologia da informação, ensino de línguas, comunicação corporativa, marketing internacional, organismos públicos e privados, entre muitas outras áreas.</p>
+                </details>
+                <details>
+                    <summary>Existe possibilidade de intercâmbio?<span class="faq-icon">+</span></summary>
+                    <p>Sim. O curso tem parcerias com universidades estrangeiras e a mobilidade acadêmica é incentivada e reconhecida no currículo.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
 </body>
 </html>

@@ -3,46 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALEA</title>
+    <title>CALEA — Centro Acadêmico do LEA-MSI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
+    <style>
+        /* ── HOME HERO ── */
+        .home-hero {
+            background: var(--verde-escuro);
+            padding: 5rem 2rem 4.5rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        .home-hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.1rem;
+        }
+
+        .home-hero h1 em {
+            font-style: normal;
+            color: var(--verde-medio);
+        }
+
+        .home-hero .sub {
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--verde-medio);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .home-hero p {
+            color: rgba(255,255,255,0.65);
+            max-width: 520px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.05rem;
+        }
+
+        .hero-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+        /* ── DESTAQUES ── */
+        .destaque-card {
+            background: var(--bg-white);
+            border: 1px solid var(--borda);
+            border-radius: 14px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .destaque-card .destaque-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .destaque-card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .destaque-card p {
+            font-size: 0.875rem;
+            color: var(--texto-muted);
+        }
+
+        .destaque-card .data {
+            font-size: 0.75rem;
+            color: var(--texto-light);
+        }
+
+        /* ── EVENTOS ── */
+        .evento-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.25rem;
+            background: var(--bg-white);
+            border: 1px solid var(--borda);
+            border-radius: 14px;
+            margin-bottom: 0.75rem;
+        }
+
+        .evento-data {
+            flex-shrink: 0;
+            background: var(--verde-claro);
+            border-radius: 10px;
+            padding: 0.6rem 0.9rem;
+            text-align: center;
+            min-width: 58px;
+        }
+
+        .evento-data .dia {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--verde-escuro);
+            line-height: 1;
+        }
+
+        .evento-data .mes {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--verde);
+        }
+
+        .evento-info h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .evento-info p { font-size: 0.875rem; color: var(--texto-muted); }
+
+        /* ── QUICK LINKS ── */
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+        }
+
+        .quick-card {
+            background: var(--verde-escuro);
+            border-radius: 14px;
+            padding: 1.5rem 1.25rem;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: background 0.18s, transform 0.18s;
+        }
+
+        .quick-card:hover {
+            background: #0a6652;
+            transform: translateY(-2px);
+        }
+
+        .quick-card .q-icon {
+            font-size: 1.4rem;
+        }
+
+        .quick-card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .quick-card p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <a href="index.html">Boas-vindas ao<br>CALEA</a>
-        </h1>
-        
-    <div class="hero-tag">Centro Acadêmico <br>de Línguas Estrangeiras APLICADAS <br>ao Multilinguismo e à Sociedade da Informação</div>
-    </header>
 
+<header id="site-header"></header>
 
-    <nav>
-        <a href="index.html">PÁGINA INICIAL</a>
-        <a href="sobre_o_curso.html">SOBRE O CURSO</a>
-        <a href="espaço_leador.html">ESPAÇO DO LEADOR</a>
-        <a href="calea.html">CENTRO ACADÊMICO (CALEA)</a>
-        <a href="projetos_eventos.html">PROJETOS E EVENTOS</a>
-        <a href="egressos.html">EGRESSOS</a>
-        <a href="comunidade.html">COMUNIDADE</a>
+<!-- HERO -->
+<div class="home-hero">
+    <span class="sub">Centro Acadêmico · LEA-MSI</span>
+    <h1>Bem-vindo ao<br><em>CALEA</em></h1>
+    <p>Representamos os estudantes do curso de Línguas Estrangeiras Aplicadas da nossa universidade. Aqui você encontra tudo sobre o CA, eventos, o curso e muito mais.</p>
+    <div class="hero-btns">
+        <a href="calea.html" class="btn btn-primary">Conheça o CA</a>
+        <a href="sobre_o_curso.html" class="btn btn-outline">Sobre o Curso</a>
+    </div>
+</div>
 
-    </nav>
+<main>
 
-    <main>
-        <h2>Destaques (avisos importantes)</h2>
-        <p>Conteúdo sobre destaques.</p>
+    <!-- DESTAQUES -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Avisos importantes</p>
+            <h2 class="sec-title">Destaques</h2>
+            <p class="sec-desc">Fique por dentro das últimas novidades do CALEA e do curso.</p>
+            <div class="cards-grid">
+                <div class="destaque-card">
+                    <div class="destaque-top">
+                        <span class="badge badge-verde">Novo</span>
+                        <span class="data">Abr 2025</span>
+                    </div>
+                    <h3>Reunião aberta do CALEA</h3>
+                    <p>Participe da próxima reunião aberta do Centro Acadêmico. Todos os alunos são bem-vindos para discutir pautas e projetos.</p>
+                </div>
+                <div class="destaque-card">
+                    <div class="destaque-top">
+                        <span class="badge badge-amber">Prazo</span>
+                        <span class="data">Mai 2025</span>
+                    </div>
+                    <h3>Período de matrícula</h3>
+                    <p>O período de matrícula para o próximo semestre está se aproximando. Confira as datas e os procedimentos junto à secretaria.</p>
+                </div>
+                <div class="destaque-card">
+                    <div class="destaque-top">
+                        <span class="badge badge-gray">Informação</span>
+                        <span class="data">Mar 2025</span>
+                    </div>
+                    <h3>Grupo oficial dos alunos</h3>
+                    <p>Entre no grupo oficial do WhatsApp para receber avisos em primeira mão. Solicite o link pelo nosso Instagram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Próximos eventos</h2>
-        <p>Conteúdo sobre próximos eventos.</p>
+    <!-- PRÓXIMOS EVENTOS -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Agenda</p>
+            <h2 class="sec-title">Próximos eventos</h2>
+            <p class="sec-desc">Não perca os próximos eventos organizados pelo CALEA.</p>
 
-        <h2>Últimas notícias</h2>
-        <p>Conteúdo sobre últimas notícias.</p>
+            <div class="evento-item">
+                <div class="evento-data"><div class="dia">15</div><div class="mes">Mai</div></div>
+                <div class="evento-info">
+                    <h3>Semana Cultural do LEA</h3>
+                    <p>Uma semana de apresentações, workshops e atividades culturais organizadas pelos alunos do curso.</p>
+                </div>
+            </div>
 
+            <div class="evento-item">
+                <div class="evento-data"><div class="dia">28</div><div class="mes">Mai</div></div>
+                <div class="evento-info">
+                    <h3>Reunião aberta do CA</h3>
+                    <p>Reunião ordinária aberta à participação de todos os alunos. Local a confirmar.</p>
+                </div>
+            </div>
 
-    </main>
+            <div class="evento-item">
+                <div class="evento-data"><div class="dia">10</div><div class="mes">Jun</div></div>
+                <div class="evento-info">
+                    <h3>Encontro com egressos</h3>
+                    <p>Ex-alunos do LEA-MSI compartilham suas experiências profissionais e trajetórias após a graduação.</p>
+                </div>
+            </div>
 
-    <footer>
-        <a><strong>CALEA</strong>  aaaaaaaaaaaaaaaaaaaaaaaaaaaa.</a>
-    </footer>
+            <div style="margin-top:1.5rem;">
+                <a href="projetos_eventos.html" class="btn btn-ghost">Ver todos os eventos →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÚLTIMAS NOTÍCIAS -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Novidades</p>
+            <h2 class="sec-title">Últimas notícias</h2>
+            <p class="sec-desc">O que aconteceu recentemente no curso e no Centro Acadêmico.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📰</div>
+                    <h3>CALEA lança novo site</h3>
+                    <p>O site do Centro Acadêmico foi reformulado para facilitar o acesso a informações sobre o curso e o CA.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Alunos do LEA vencem hackathon</h3>
+                    <p>Equipe composta por alunos do curso ficou em primeiro lugar em competição de línguas e tecnologia.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Parceria de intercâmbio ampliada</h3>
+                    <p>Novas universidades parceiras foram adicionadas ao programa de mobilidade internacional do curso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACESSO RÁPIDO -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Atalhos</p>
+            <h2 class="sec-title">Acesso rápido</h2>
+            <div class="quick-grid">
+                <a href="sobre_o_curso.html" class="quick-card">
+                    <div class="q-icon">📚</div>
+                    <h3>Sobre o Curso</h3>
+                    <p>Estrutura curricular e diferenciais do LEA-MSI</p>
+                </a>
+                <a href="espaco_leador.html" class="quick-card">
+                    <div class="q-icon">🎓</div>
+                    <h3>Espaço do Leador</h3>
+                    <p>Recursos e materiais para os alunos</p>
+                </a>
+                <a href="calea.html" class="quick-card">
+                    <div class="q-icon">🏛️</div>
+                    <h3>Centro Acadêmico</h3>
+                    <p>Gestão, estatuto e como participar</p>
+                </a>
+                <a href="comunidade.html" class="quick-card">
+                    <div class="q-icon">👥</div>
+                    <h3>Comunidade</h3>
+                    <p>Professores, contatos e parcerias</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
 </body>
 </html>

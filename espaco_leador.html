@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço do Leador — CALEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .recurso-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+        .recurso-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; padding:1.5rem; }
+        .recurso-card h3 { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; margin-bottom:.4rem; }
+        .recurso-card p { font-size:.875rem; color:var(--texto-muted); margin-bottom:1rem; }
+
+        .tip-box { background:var(--verde-claro); border-radius:14px; padding:1.5rem 1.75rem; margin-bottom:1rem; border-left:4px solid var(--verde); }
+        .tip-box h4 { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; color:var(--verde-escuro); margin-bottom:.3rem; }
+        .tip-box p { font-size:.875rem; color:var(--verde-escuro); opacity:.85; }
+
+        .checklist { list-style:none; }
+        .checklist li { display:flex; gap:.75rem; padding:.6rem 0; border-bottom:1px solid var(--borda); font-size:.9rem; color:var(--texto-muted); }
+        .checklist li::before { content:'→'; color:var(--verde); font-weight:700; flex-shrink:0; }
+    </style>
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <span class="page-tag">Para os alunos</span>
+        <h1>Espaço do Leador</h1>
+        <p>Recursos, dicas e informações úteis para a vida acadêmica no LEA-MSI.</p>
+    </div>
+</div>
+
+<main>
+
+    <!-- RECURSOS -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Materiais</p>
+            <h2 class="sec-title">Recursos úteis</h2>
+            <p class="sec-desc">Links e materiais organizados pelo CALEA para facilitar sua vida no curso.</p>
+            <div class="recurso-grid">
+                <div class="recurso-card">
+                    <div class="card-icon">📋</div>
+                    <h3>Fluxo curricular</h3>
+                    <p>Visualize o fluxo completo de disciplinas e planeje sua grade semestral.</p>
+                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem;">Acessar</a>
+                </div>
+                <div class="recurso-card">
+                    <div class="card-icon">📅</div>
+                    <h3>Calendário acadêmico</h3>
+                    <p>Datas de matrícula, provas, recessos e eventos do calendário universitário.</p>
+                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem;">Acessar</a>
+                </div>
+                <div class="recurso-card">
+                    <div class="card-icon">📖</div>
+                    <h3>Biblioteca virtual</h3>
+                    <p>Acesse os portais de periódicos e acervos digitais da universidade.</p>
+                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem;">Acessar</a>
+                </div>
+                <div class="recurso-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Portal do aluno</h3>
+                    <p>Histórico, matrícula, requerimentos e documentos oficiais.</p>
+                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem;">Acessar</a>
+                </div>
+                <div class="recurso-card">
+                    <div class="card-icon">✈️</div>
+                    <h3>Mobilidade internacional</h3>
+                    <p>Informações sobre programas de intercâmbio e bolsas disponíveis.</p>
+                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem;">Acessar</a>
+                </div>
+                <div class="recurso-card">
+                    <div class="card-icon">📝</div>
+                    <h3>Ementas das disciplinas</h3>
+                    <p>Acesse os planos de ensino e ementas de todas as disciplinas do curso.</p>
+                    <a href="#" class="btn btn-ghost" style="font-size:.82rem; padding:.45rem 1rem;">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DICAS DE SOBREVIVÊNCIA -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Guia prático</p>
+            <h2 class="sec-title">Dicas de sobrevivência no LEA</h2>
+            <p class="sec-desc">Conselhos de quem já passou pelos semestres e quer facilitar a sua vida.</p>
+            <div style="max-width:700px;">
+                <div class="tip-box">
+                    <h4>🗣️ Não tenha medo de falar as línguas</h4>
+                    <p>O erro faz parte do aprendizado. Use as aulas para praticar sem medo de julgamentos.</p>
+                </div>
+                <div class="tip-box">
+                    <h4>📚 Organize-se desde o início</h4>
+                    <p>Com três línguas simultâneas, a organização é fundamental. Crie um cronograma de estudos logo na primeira semana.</p>
+                </div>
+                <div class="tip-box">
+                    <h4>🤝 Crie uma rede de estudos</h4>
+                    <p>Grupos de estudo com colegas de turma fazem toda a diferença, especialmente nas disciplinas mais exigentes.</p>
+                </div>
+                <div class="tip-box">
+                    <h4>🌍 Explore as oportunidades de mobilidade</h4>
+                    <p>O curso tem parcerias internacionais — pesquise cedo e se prepare para os processos seletivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHECKLIST DO CALOURO -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Primeiros passos</p>
+            <h2 class="sec-title">Checklist do calouro</h2>
+            <p class="sec-desc">Se você acabou de entrar no curso, comece por aqui.</p>
+            <ul class="checklist" style="max-width:600px;">
+                <li>Ative seu e-mail institucional universitário</li>
+                <li>Acesse o portal do aluno e verifique sua matrícula</li>
+                <li>Entre nos grupos de WhatsApp do curso e da sua turma</li>
+                <li>Conheça o espaço físico do departamento e a biblioteca</li>
+                <li>Leia o fluxo curricular do seu ano de ingresso</li>
+                <li>Participe da recepção dos calouros organizada pelo CALEA</li>
+                <li>Salve o contato da secretaria do curso</li>
+                <li>Siga o CALEA nas redes sociais para não perder nada</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Dúvidas frequentes</p>
+            <h2 class="sec-title">Perguntas dos alunos</h2>
+            <div class="faq-wrap">
+                <details>
+                    <summary>Como funciona a matrícula em disciplinas optativas?<span class="faq-icon">+</span></summary>
+                    <p>A matrícula em optativas segue o calendário acadêmico geral. Verifique os pré-requisitos e a disponibilidade de vagas no portal do aluno.</p>
+                </details>
+                <details>
+                    <summary>Posso trancar o semestre?<span class="faq-icon">+</span></summary>
+                    <p>Sim. O trancamento de semestre é possível dentro do prazo estabelecido no calendário acadêmico. Consulte a secretaria para os procedimentos.</p>
+                </details>
+                <details>
+                    <summary>Como solicitar aproveitamento de disciplinas?<span class="faq-icon">+</span></summary>
+                    <p>Requerimentos de aproveitamento de estudos devem ser feitos na secretaria do curso, com documentação comprobatória. Cada caso é analisado individualmente.</p>
+                </details>
+                <details>
+                    <summary>Onde fica a sala do CALEA?<span class="faq-icon">+</span></summary>
+                    <p>Consulte a seção de contato na página do Centro Acadêmico para informações de localização atualizadas.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
+</body>
+</html>

@@ -3,117 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALEA</title>
+    <title>Comunidade — CALEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
-    
+    <style>
+        .prof-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+        .prof-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; padding:1.25rem; display:flex; gap:.9rem; align-items:flex-start; }
+        .prof-info h4 { font-family:'Syne',sans-serif; font-size:.9rem; font-weight:700; margin-bottom:.15rem; }
+        .prof-info .disciplina { font-size:.78rem; color:var(--verde); font-weight:600; margin-bottom:.25rem; }
+        .prof-info .email-link { font-size:.78rem; color:var(--texto-muted); text-decoration:none; }
+        .prof-info .email-link:hover { color:var(--verde); }
+
+        .lea-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+        .lea-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; padding:1.25rem; }
+        .lea-card .universidade { font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--texto-light); margin-bottom:.3rem; }
+        .lea-card h4 { font-family:'Syne',sans-serif; font-size:.88rem; font-weight:700; margin-bottom:.3rem; }
+        .lea-card p { font-size:.8rem; color:var(--texto-muted); }
+        .lea-card a { font-size:.8rem; color:var(--verde); text-decoration:none; display:inline-block; margin-top:.4rem; }
+        .lea-card a:hover { text-decoration:underline; }
+
+        .parceria-item { display:flex; gap:1.25rem; padding:1.25rem; background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; margin-bottom:.75rem; align-items:center; }
+        .parceria-icon { width:44px; height:44px; border-radius:10px; background:var(--verde-claro); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+        .parceria-info h4 { font-family:'Syne',sans-serif; font-size:.92rem; font-weight:700; margin-bottom:.2rem; }
+        .parceria-info p { font-size:.85rem; color:var(--texto-muted); }
+
+        .cta-box { background:var(--verde-escuro); border-radius:16px; padding:2.5rem; color:#fff; text-align:center; }
+        .cta-box h3 { font-family:'Syne',sans-serif; font-size:1.3rem; font-weight:800; margin-bottom:.5rem; }
+        .cta-box p { color:rgba(255,255,255,.65); font-size:.9rem; margin-bottom:1.5rem; max-width:480px; margin-left:auto; margin-right:auto; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <a href="index.html">Boas-vindas ao<br>CALEA</a>
-        </h1>
-        
-    <div class="hero-tag">Centro Acadêmico <br>de Línguas Estrangeiras APLICADAS <br>ao Multilinguismo e à Sociedade da Informação</div>
-    </header>
 
+<header id="site-header"></header>
 
-    <nav>
-        <a href="index.html">PÁGINA INICIAL</a>
-        <a href="sobre_o_curso.html">SOBRE O CURSO</a>
-        <a href="espaço_leador.html">ESPAÇO DO LEADOR</a>
-        <a href="calea.html">CENTRO ACADÊMICO (CALEA)</a>
-        <a href="projetos_eventos.html">PROJETOS E EVENTOS</a>
-        <a href="egressos.html">EGRESSOS</a>
-        <a href="comunidade.html">COMUNIDADE</a>
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <span class="page-tag">Comunidade</span>
+        <h1>Comunidade LEA-MSI</h1>
+        <p>Professores, outros LEAs, contatos e parcerias — tudo em um só lugar.</p>
+    </div>
+</div>
 
-    </nav>
-
-    <main>
-
-        <h1>AAAAAAAAAAA</h1>
+<main>
 
     <!-- PROFESSORES -->
-    <section>
+    <section class="bg-white">
         <div class="container">
             <p class="sec-label">Corpo docente</p>
             <h2 class="sec-title">Professores do curso</h2>
             <p class="sec-desc">Lista de professores do LEA-MSI com suas respectivas áreas e contatos. Atualizada pelo CALEA.</p>
-            <div class="gestao-grid">
-                <div class="membro-card">
-                    <div class="avatar" style="margin:0 auto .75rem;">PR</div>
-                    <h4>Nome Sobrenome</h4>
-                    <span class="cargo">Professor</span>
+            <div class="prof-grid">
+                <div class="prof-card">
+                    <div class="avatar">AB</div>
+                    <div class="prof-info">
+                        <h4>Prof. Nome Sobrenome</h4>
+                        <p class="disciplina">Língua Inglesa</p>
+                        <a class="email-link" href="mailto:prof@universidade.edu.br">prof@universidade.edu.br</a>
+                    </div>
                 </div>
-                <div class="membro-card">
-                    <div class="avatar" style="margin:0 auto .75rem;">VP</div>
-                    <h4>Nome Sobrenome</h4>
-                    <span class="cargo">Professor</span>
+                <div class="prof-card">
+                    <div class="avatar">CD</div>
+                    <div class="prof-info">
+                        <h4>Profa. Nome Sobrenome</h4>
+                        <p class="disciplina">Língua Francesa</p>
+                        <a class="email-link" href="mailto:prof@universidade.edu.br">prof@universidade.edu.br</a>
+                    </div>
                 </div>
-                <div class="membro-card">
-                    <div class="avatar" style="margin:0 auto .75rem;">TE</div>
-                    <h4>Nome Sobrenome</h4>
-                    <span class="cargo">Professor</span>
+                <div class="prof-card">
+                    <div class="avatar">EF</div>
+                    <div class="prof-info">
+                        <h4>Prof. Nome Sobrenome</h4>
+                        <p class="disciplina">Língua Espanhola</p>
+                        <a class="email-link" href="mailto:prof@universidade.edu.br">prof@universidade.edu.br</a>
+                    </div>
                 </div>
-                <div class="membro-card">
-                    <div class="avatar" style="margin:0 auto .75rem;">SC</div>
-                    <h4>Nome Sobrenome</h4>
-                    <span class="cargo">Professor</span>
+                <div class="prof-card">
+                    <div class="avatar">GH</div>
+                    <div class="prof-info">
+                        <h4>Profa. Nome Sobrenome</h4>
+                        <p class="disciplina">Sociedade da Informação</p>
+                        <a class="email-link" href="mailto:prof@universidade.edu.br">prof@universidade.edu.br</a>
+                    </div>
                 </div>
-                <div class="membro-card">
-                    <div class="avatar" style="margin:0 auto .75rem;">CO</div>
-                    <h4>Nome Sobrenome</h4>
-                    <span class="cargo">Professor</span>
+                <div class="prof-card">
+                    <div class="avatar">IJ</div>
+                    <div class="prof-info">
+                        <h4>Prof. Nome Sobrenome</h4>
+                        <p class="disciplina">Linguística Aplicada</p>
+                        <a class="email-link" href="mailto:prof@universidade.edu.br">prof@universidade.edu.br</a>
+                    </div>
                 </div>
-                <div class="membro-card">
-                    <div class="avatar" style="margin:0 auto .75rem;">EV</div>
-                    <h4>Nome Sobrenome</h4>
-                    <span class="cargo">Professor</span>
+                <div class="prof-card">
+                    <div class="avatar">KL</div>
+                    <div class="prof-info">
+                        <h4>Profa. Nome Sobrenome</h4>
+                        <p class="disciplina">Coordenadora do Curso</p>
+                        <a class="email-link" href="mailto:coord.lea@universidade.edu.br">coord.lea@universidade.edu.br</a>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top:1.5rem; font-size:.82rem; color:var(--texto-muted);">
+                Esta lista pode estar desatualizada. Em caso de dúvida, consulte o site oficial do departamento ou entre em contato com a secretaria.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUTROS LEAS -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Rede nacional</p>
+            <h2 class="sec-title">Alunos de outros LEAs</h2>
+            <p class="sec-desc">O LEA existe em diversas universidades brasileiras. Conheça outros cursos e conecte-se com essa comunidade.</p>
+            <div class="lea-grid">
+                <div class="lea-card">
+                    <p class="universidade">UFRJ</p>
+                    <h4>LEA — Rio de Janeiro</h4>
+                    <p>Línguas Estrangeiras Aplicadas às Negociações Internacionais</p>
+                    <a href="#" target="_blank">Visitar site →</a>
+                </div>
+                <div class="lea-card">
+                    <p class="universidade">UFPB</p>
+                    <h4>LEA-NI — João Pessoa</h4>
+                    <p>Línguas Estrangeiras Aplicadas às Negociações Internacionais</p>
+                    <a href="#" target="_blank">Visitar site →</a>
+                </div>
+                <div class="lea-card">
+                    <p class="universidade">UFBa</p>
+                    <h4>LEA — Salvador</h4>
+                    <p>Línguas Estrangeiras Aplicadas</p>
+                    <a href="#" target="_blank">Visitar site →</a>
+                </div>
+                <div class="lea-card">
+                    <p class="universidade">UNILA</p>
+                    <h4>LEA — Foz do Iguaçu</h4>
+                    <p>Letras Artes e Mediação Cultural</p>
+                    <a href="#" target="_blank">Visitar site →</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- PARCERIAS INSTITUCIONAIS -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Parcerias</p>
+            <h2 class="sec-title">Parcerias institucionais</h2>
+            <p class="sec-desc">Entidades e instituições parceiras do CALEA e do curso.</p>
+            <div class="parceria-item">
+                <div class="parceria-icon">🇫🇷</div>
+                <div class="parceria-info"><h4>Institut Français</h4><p>Acesso a eventos culturais, bolsas e recursos de língua francesa para alunos do LEA.</p></div>
+            </div>
+            <div class="parceria-item">
+                <div class="parceria-icon">🇪🇸</div>
+                <div class="parceria-info"><h4>Instituto Cervantes</h4><p>Certificações de língua espanhola com condições especiais para alunos do curso.</p></div>
+            </div>
+            <div class="parceria-item">
+                <div class="parceria-icon">🇬🇧</div>
+                <div class="parceria-info"><h4>British Council</h4><p>Programa de certificações e intercâmbios com o Reino Unido.</p></div>
+            </div>
+            <div class="parceria-item">
+                <div class="parceria-icon">🏛️</div>
+                <div class="parceria-info"><h4>DCE da Universidade</h4><p>Articulação com o Diretório Central dos Estudantes em pautas que envolvem toda a comunidade universitária.</p></div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Alunos de outros LEAs</h2>
-        <p>Conteúdo sobre alunos de outros LEAs.</p>
-
-        <h2>Parcerias institucionais</h2>
-        <p>Conteúdo sobre parcerias institucionais.</p>
-
-        <h2>Contato geral</h2>
-        <p>TODO DIA ALGUEM PEDE O CONTATO DE ALGUM PROFESSOR <br>
-           deixar o contato de todo mundo aqui
-        </p>
-    </main>
-
-        <!--duvidas frequentes-->
-        <section id="faq">
-            <div class="container">
-                <h2 class="section-title">Dúvidas frequentes</h2>
-                <div class="faq-list">
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
+    <!-- CONTATO GERAL -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Precisa de algo?</p>
+            <h2 class="sec-title">Contato geral</h2>
+            <p class="sec-desc">É muito comum que alunos precisem de contatos de professores, da secretaria ou de outros setores. Centralizamos isso aqui.</p>
+            <div class="cards-grid" style="margin-bottom:2rem;">
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Secretaria do curso</h3>
+                    <p>Para requerimentos, documentos e questões administrativas do LEA-MSI.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👩‍💼</div>
+                    <h3>Coordenação</h3>
+                    <p>Para assuntos acadêmicos, aproveitamento de disciplinas e questões pedagógicas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>Ouvidoria</h3>
+                    <p>Para reclamações, denúncias ou situações que requerem sigilo e imparcialidade.</p>
                 </div>
             </div>
-        </section>
+            <div class="cta-box">
+                <h3>Não encontrou o contato que precisava?</h3>
+                <p>Manda mensagem para o CALEA. Provavelmente temos o contato que você precisa ou sabemos como te ajudar.</p>
+                <a href="calea.html#contato" class="btn btn-primary">Falar com o CALEA</a>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <a><strong>CALEA</strong>  aaaaaaaaaaaaaaaaaaaaaaaaaaaa.</a>
-    </footer>
+    <!-- FAQ -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Dúvidas frequentes</p>
+            <h2 class="sec-title">Perguntas da comunidade</h2>
+            <div class="faq-wrap">
+                <details>
+                    <summary>Como encontro o e-mail de um professor específico?<span class="faq-icon">+</span></summary>
+                    <p>Consulte a lista de professores nesta página. Se não estiver aqui, mande mensagem para o CALEA ou acesse o site do departamento. Também é possível perguntar na secretaria do curso.</p>
+                </details>
+                <details>
+                    <summary>Como entro em contato com alunos de outros LEAs?<span class="faq-icon">+</span></summary>
+                    <p>Os centros acadêmicos dos outros LEAs são um bom ponto de partida. O CALEA também pode intermediar contatos com outros CAs da rede.</p>
+                </details>
+                <details>
+                    <summary>Posso usar as parcerias com institutos mesmo sendo calouro?<span class="faq-icon">+</span></summary>
+                    <p>Sim. As parcerias estão disponíveis para todos os alunos regularmente matriculados no curso, independente do semestre.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
 </body>
 </html>

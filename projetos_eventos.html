@@ -3,47 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALEA</title>
+    <title>Projetos e Eventos — CALEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
+    <style>
+        .evento-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; overflow:hidden; }
+        .evento-header { background:var(--verde-escuro); padding:1.25rem 1.5rem; display:flex; align-items:center; gap:1rem; }
+        .evento-header .edata { background:rgba(255,255,255,.12); border-radius:8px; padding:.5rem .8rem; text-align:center; flex-shrink:0; }
+        .evento-header .edata .dia { font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800; color:#fff; line-height:1; }
+        .evento-header .edata .mes { font-size:.68rem; font-weight:600; text-transform:uppercase; color:var(--verde-medio); }
+        .evento-header h3 { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#fff; margin-bottom:.15rem; }
+        .evento-header p { font-size:.8rem; color:rgba(255,255,255,.6); }
+        .evento-body { padding:1.25rem 1.5rem; font-size:.875rem; color:var(--texto-muted); }
+
+        .passado-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+        .passado-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; padding:1.25rem; }
+        .passado-card .ano { font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--texto-light); margin-bottom:.4rem; }
+        .passado-card h4 { font-family:'Syne',sans-serif; font-size:.9rem; font-weight:700; margin-bottom:.35rem; }
+        .passado-card p { font-size:.82rem; color:var(--texto-muted); }
+
+        .projeto-item { display:flex; gap:1.25rem; padding:1.25rem; background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; margin-bottom:.75rem; align-items:flex-start; }
+        .projeto-icon { width:44px; height:44px; border-radius:10px; background:var(--verde-claro); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+        .projeto-info h4 { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; margin-bottom:.3rem; }
+        .projeto-info p { font-size:.875rem; color:var(--texto-muted); }
+
+        .parceiro-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+        .parceiro-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:12px; padding:1.25rem; text-align:center; }
+        .parceiro-card .p-icon { font-size:1.8rem; margin-bottom:.5rem; }
+        .parceiro-card h4 { font-family:'Syne',sans-serif; font-size:.88rem; font-weight:700; margin-bottom:.25rem; }
+        .parceiro-card p { font-size:.78rem; color:var(--texto-muted); }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <a href="index.html">Boas-vindas ao<br>CALEA</a>
-        </h1>
-        
-    <div class="hero-tag">Centro Acadêmico <br>de Línguas Estrangeiras APLICADAS <br>ao Multilinguismo e à Sociedade da Informação</div>
-    </header>
 
+<header id="site-header"></header>
 
-    <nav>
-        <a href="index.html">PÁGINA INICIAL</a>
-        <a href="sobre_o_curso.html">SOBRE O CURSO</a>
-        <a href="espaço_leador.html">ESPAÇO DO LEADOR</a>
-        <a href="calea.html">CENTRO ACADÊMICO (CALEA)</a>
-        <a href="projetos_eventos.html">PROJETOS E EVENTOS</a>
-        <a href="egressos.html">EGRESSOS</a>
-        <a href="comunidade.html">COMUNIDADE</a>
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <span class="page-tag">Agenda</span>
+        <h1>Projetos e Eventos</h1>
+        <p>Confira o que o CALEA está organizando e o que já aconteceu.</p>
+    </div>
+</div>
 
-    </nav>
+<main>
 
-    <main>
-        <h1>Projetos do CA</h1>
-        <p>Conteúdo sobre projetos do CA.</p>
+    <!-- PROJETOS DO CA -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Iniciativas</p>
+            <h2 class="sec-title">Projetos do CA</h2>
+            <p class="sec-desc">Projetos contínuos organizados e mantidos pelo CALEA ao longo do ano.</p>
+            <div class="projeto-item">
+                <div class="projeto-icon">🗣️</div>
+                <div class="projeto-info"><h4>Bate-papo com egressos</h4><p>Série de encontros informais onde ex-alunos do LEA compartilham suas trajetórias profissionais e dão dicas para os alunos atuais.</p></div>
+            </div>
+            <div class="projeto-item">
+                <div class="projeto-icon">📚</div>
+                <div class="projeto-info"><h4>Troca de livros e materiais</h4><p>Espaço físico e virtual para troca e doação de livros didáticos e materiais do curso entre os alunos.</p></div>
+            </div>
+            <div class="projeto-item">
+                <div class="projeto-icon">🌍</div>
+                <div class="projeto-info"><h4>Cineclube LEA</h4><p>Sessões regulares de filmes em língua estrangeira seguidas de debate, promovendo o contato cultural e linguístico.</p></div>
+            </div>
+            <div class="projeto-item">
+                <div class="projeto-icon">🎤</div>
+                <div class="projeto-info"><h4>Semana Cultural do LEA</h4><p>Evento anual com apresentações artísticas, workshops de línguas, palestras e atividades culturais organizadas pelos alunos.</p></div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Eventos futuros</h2>
-        <p>Conteúdo sobre eventos futuros.</p>
+    <!-- EVENTOS FUTUROS -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Em breve</p>
+            <h2 class="sec-title">Próximos eventos</h2>
+            <div class="cards-grid">
+                <div class="evento-card">
+                    <div class="evento-header">
+                        <div class="edata"><div class="dia">15</div><div class="mes">Mai</div></div>
+                        <div><h3>Semana Cultural do LEA</h3><p>Durante toda a semana</p></div>
+                    </div>
+                    <div class="evento-body">Edição anual da Semana Cultural com shows, workshops de língua, palestras e feira de projetos dos alunos. Aberto à comunidade.</div>
+                </div>
+                <div class="evento-card">
+                    <div class="evento-header">
+                        <div class="edata"><div class="dia">28</div><div class="mes">Mai</div></div>
+                        <div><h3>Reunião aberta do CA</h3><p>18h · Sala a confirmar</p></div>
+                    </div>
+                    <div class="evento-body">Reunião ordinária do CALEA aberta a todos os alunos. Pauta inclui prestação de contas e discussão de próximas atividades.</div>
+                </div>
+                <div class="evento-card">
+                    <div class="evento-header">
+                        <div class="edata"><div class="dia">10</div><div class="mes">Jun</div></div>
+                        <div><h3>Encontro com egressos</h3><p>19h · Auditório do bloco X</p></div>
+                    </div>
+                    <div class="evento-body">Ex-alunos do LEA-MSI apresentam suas trajetórias profissionais. Oportunidade de networking e orientação de carreira.</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Eventos passados</h2>
-        <p>Conteúdo sobre eventos passados.</p>
+    <!-- EVENTOS PASSADOS -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Histórico</p>
+            <h2 class="sec-title">Eventos passados</h2>
+            <p class="sec-desc">Um registro do que o CALEA já organizou.</p>
+            <div class="passado-grid">
+                <div class="passado-card"><div class="ano">2025 · Março</div><h4>Recepção dos calouros</h4><p>Boas-vindas aos alunos ingressantes com atividades de integração.</p></div>
+                <div class="passado-card"><div class="ano">2024 · Novembro</div><h4>Semana Cultural do LEA</h4><p>Quatro dias de atividades culturais com mais de 200 participantes.</p></div>
+                <div class="passado-card"><div class="ano">2024 · Outubro</div><h4>Cineclube especial</h4><p>Exibição de filmes em inglês, francês e espanhol com debate temático.</p></div>
+                <div class="passado-card"><div class="ano">2024 · Agosto</div><h4>Encontro com egressos</h4><p>Depoimentos de ex-alunos sobre carreira em RI, TI e ensino de línguas.</p></div>
+                <div class="passado-card"><div class="ano">2024 · Maio</div><h4>Feira de trocas de livros</h4><p>Alunos trocaram e doaram materiais didáticos do curso.</p></div>
+                <div class="passado-card"><div class="ano">2024 · Março</div><h4>Recepção dos calouros</h4><p>Evento de acolhimento dos ingressantes com apresentação do curso e do CA.</p></div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Parcerias</h2>
-        <p>Conteúdo sobre parcerias.</p>
-    </main>
+    <!-- PARCERIAS -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Colaborações</p>
+            <h2 class="sec-title">Parcerias</h2>
+            <p class="sec-desc">Entidades e organizações com quem o CALEA colabora.</p>
+            <div class="parceiro-grid">
+                <div class="parceiro-card"><div class="p-icon">🏛️</div><h4>DCE da Universidade</h4><p>Diretório Central dos Estudantes</p></div>
+                <div class="parceiro-card"><div class="p-icon">📖</div><h4>Biblioteca Central</h4><p>Parceria para acervo e eventos</p></div>
+                <div class="parceiro-card"><div class="p-icon">🌐</div><h4>Outros CAs e DAs</h4><p>Integração com CAs de outros cursos</p></div>
+                <div class="parceiro-card"><div class="p-icon">🎬</div><h4>Centros culturais</h4><p>Institutos de língua e cultura</p></div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <a><strong>CALEA</strong>  aaaaaaaaaaaaaaaaaaaaaaaaaaaa.</a>
-    </footer>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
 </body>
 </html>

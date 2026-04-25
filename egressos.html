@@ -3,72 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALEA</title>
+    <title>Egressos — CALEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
+    <style>
+        .depoimento-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.25rem; }
+        .depoimento-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; padding:1.5rem; display:flex; flex-direction:column; gap:1rem; }
+        .dep-quote { font-size:.9rem; color:var(--texto-muted); font-style:italic; line-height:1.65; flex:1; }
+        .dep-quote::before { content:'"'; font-size:2rem; color:var(--verde-claro); line-height:.5; display:block; margin-bottom:.5rem; font-style:normal; font-family:'Syne',sans-serif; }
+        .dep-author { display:flex; align-items:center; gap:.75rem; border-top:1px solid var(--borda); padding-top:1rem; }
+        .dep-author h4 { font-size:.88rem; font-weight:600; }
+        .dep-author p { font-size:.78rem; color:var(--verde); font-weight:500; }
+
+        .trajetoria-item { display:flex; gap:1.25rem; padding:1.25rem; background:var(--bg-white); border:1px solid var(--borda); border-radius:14px; margin-bottom:.75rem; align-items:flex-start; }
+        .traj-avatar { flex-shrink:0; }
+        .traj-info h4 { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; margin-bottom:.2rem; }
+        .traj-info .formatura { font-size:.78rem; color:var(--texto-light); margin-bottom:.35rem; }
+        .traj-info p { font-size:.875rem; color:var(--texto-muted); }
+
+        .areas-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem; }
+        .area-card { background:var(--bg-white); border:1px solid var(--borda); border-radius:12px; padding:1.25rem; text-align:center; }
+        .area-card .a-icon { font-size:1.6rem; margin-bottom:.5rem; }
+        .area-card h4 { font-family:'Syne',sans-serif; font-size:.88rem; font-weight:700; }
+
+        .contribuir-box { background:var(--verde-escuro); border-radius:16px; padding:2.5rem; color:#fff; display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap; }
+        .contribuir-box h3 { font-family:'Syne',sans-serif; font-size:1.3rem; font-weight:800; margin-bottom:.5rem; }
+        .contribuir-box p { color:rgba(255,255,255,.65); font-size:.9rem; max-width:460px; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <a href="index.html">Boas-vindas ao<br>CALEA</a>
-        </h1>
-        
-    <div class="hero-tag">Centro Acadêmico <br>de Línguas Estrangeiras APLICADAS <br>ao Multilinguismo e à Sociedade da Informação</div>
-    </header>
 
+<header id="site-header"></header>
 
-    <nav>
-        <a href="index.html">PÁGINA INICIAL</a>
-        <a href="sobre_o_curso.html">SOBRE O CURSO</a>
-        <a href="espaço_leador.html">ESPAÇO DO LEADOR</a>
-        <a href="calea.html">CENTRO ACADÊMICO (CALEA)</a>
-        <a href="projetos_eventos.html">PROJETOS E EVENTOS</a>
-        <a href="egressos.html">EGRESSOS</a>
-        <a href="comunidade.html">COMUNIDADE</a>
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <span class="page-tag">Alumni</span>
+        <h1>Egressos do LEA-MSI</h1>
+        <p>Conheça o que os ex-alunos do curso estão fazendo e inspire-se com suas trajetórias.</p>
+    </div>
+</div>
 
-    </nav>
+<main>
 
-    <main>
-        <h1>Onde estão os egressos</h1>
-        <p>Conteúdo sobre onde estão os egressos.</p>
+    <!-- ONDE ESTÃO -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Mercado de trabalho</p>
+            <h2 class="sec-title">Onde estão os egressos</h2>
+            <p class="sec-desc">Os formados pelo LEA-MSI atuam em áreas diversas, no Brasil e no exterior.</p>
+            <div class="areas-grid">
+                <div class="area-card"><div class="a-icon">🌐</div><h4>Relações Internacionais</h4></div>
+                <div class="area-card"><div class="a-icon">💻</div><h4>Tecnologia da Informação</h4></div>
+                <div class="area-card"><div class="a-icon">✏️</div><h4>Ensino de Línguas</h4></div>
+                <div class="area-card"><div class="a-icon">📝</div><h4>Tradução e Interpretação</h4></div>
+                <div class="area-card"><div class="a-icon">📣</div><h4>Comunicação e Marketing</h4></div>
+                <div class="area-card"><div class="a-icon">🏛️</div><h4>Setor Público</h4></div>
+                <div class="area-card"><div class="a-icon">🎓</div><h4>Pós-Graduação</h4></div>
+                <div class="area-card"><div class="a-icon">✈️</div><h4>Carreira Internacional</h4></div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Depoimentos</h2>
-        <p>Depoimentos dos egressos.</p>
-
-        <h2>Trajetórias profissionais</h2>
-        <p>Trajetórias profissionais dos egressos.</p>
-
-        <h2>Contribuir com sua história</h2>
-        <p>Como contribuir com sua história.</p>
-    </main>
-
-        <!--duvidas frequentes-->
-        <section id="faq">
-            <div class="container">
-                <h2 class="section-title">Dúvidas frequentes</h2>
-                <div class="faq-list">
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
-                    <details>
-                        <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
-                        <p>bbbbbbbbb</p>
-                    </details>
+    <!-- DEPOIMENTOS -->
+    <section>
+        <div class="container">
+            <p class="sec-label">Depoimentos</p>
+            <h2 class="sec-title">O que dizem os egressos</h2>
+            <p class="sec-desc">Veja o que quem passou pelo LEA-MSI tem a dizer sobre o curso e a carreira.</p>
+            <div class="depoimento-grid">
+                <div class="depoimento-card">
+                    <p class="dep-quote">O LEA me deu uma base que nenhum outro curso teria conseguido. Sair com três línguas e ainda saber trabalhar com tecnologia foi diferencial enorme no mercado.</p>
+                    <div class="dep-author">
+                        <div class="avatar">AN</div>
+                        <div><h4>Nome do Egresso</h4><p>Formado em 2022 · Área de TI</p></div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <p class="dep-quote">Trabalho em uma empresa internacional e uso inglês, francês e espanhol todos os dias. O curso me preparou de verdade para isso.</p>
+                    <div class="dep-author">
+                        <div class="avatar">BM</div>
+                        <div><h4>Nome da Egressa</h4><p>Formada em 2021 · Comunicação internacional</p></div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <p class="dep-quote">Entrei no mestrado em Linguística Aplicada direto após me formar. A formação do LEA foi excelente para essa transição para a pós-graduação.</p>
+                    <div class="dep-author">
+                        <div class="avatar">CP</div>
+                        <div><h4>Nome do Egresso</h4><p>Formado em 2023 · Pós-graduação</p></div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    <footer>
-        <a><strong>CALEA</strong>  aaaaaaaaaaaaaaaaaaaaaaaaaaaa.</a>
-    </footer>
+    <!-- TRAJETÓRIAS -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Histórias</p>
+            <h2 class="sec-title">Trajetórias profissionais</h2>
+            <p class="sec-desc">Exemplos de caminhos que os egressos tomaram após a graduação.</p>
+            <div class="trajetoria-item">
+                <div class="traj-avatar"><div class="avatar">DR</div></div>
+                <div class="traj-info">
+                    <h4>Nome Sobrenome</h4>
+                    <p class="formatura">Formado em 2020</p>
+                    <p>Iniciou carreira como tradutor freelancer durante a graduação, foi contratado por uma empresa de tecnologia multinacional após se formar e hoje lidera uma equipe de localização de software.</p>
+                </div>
+            </div>
+            <div class="trajetoria-item">
+                <div class="traj-avatar"><div class="avatar">ES</div></div>
+                <div class="traj-info">
+                    <h4>Nome Sobrenome</h4>
+                    <p class="formatura">Formada em 2019</p>
+                    <p>Participou do programa de mobilidade durante o curso, se formou e foi selecionada para um mestrado na França. Hoje trabalha em um organismo internacional em Genebra.</p>
+                </div>
+            </div>
+            <div class="trajetoria-item">
+                <div class="traj-avatar"><div class="avatar">FC</div></div>
+                <div class="traj-info">
+                    <h4>Nome Sobrenome</h4>
+                    <p class="formatura">Formado em 2022</p>
+                    <p>Após se formar, ingressou no serviço público federal. Utiliza inglês e espanhol no trabalho diário em um ministério com atuação internacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTRIBUIR -->
+    <section>
+        <div class="container">
+            <div class="contribuir-box">
+                <div>
+                    <h3>Você é egresso do LEA-MSI?</h3>
+                    <p>Compartilhe sua história e inspire os alunos atuais. Entre em contato com o CALEA para figurar nesta página ou participar de um encontro com alunos.</p>
+                </div>
+                <a href="calea.html#contato" class="btn btn-primary">Entre em contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white">
+        <div class="container">
+            <p class="sec-label">Dúvidas frequentes</p>
+            <h2 class="sec-title">Perguntas sobre egressos</h2>
+            <div class="faq-wrap">
+                <details>
+                    <summary>Como posso contribuir com minha história?<span class="faq-icon">+</span></summary>
+                    <p>Entre em contato com o CALEA pelo Instagram ou e-mail e manifeste seu interesse. Podemos incluir seu depoimento nesta página ou convidá-lo para um evento.</p>
+                </details>
+                <details>
+                    <summary>Existe uma rede de egressos organizada?<span class="faq-icon">+</span></summary>
+                    <p>O CALEA está trabalhando para criar um espaço de networking entre egressos. Em breve mais informações serão divulgadas nas nossas redes.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
 </body>
 </html>
