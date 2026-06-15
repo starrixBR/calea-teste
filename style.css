@@ -19,6 +19,61 @@
     --raio-pill: 999px;
 }
 
+/* ── ACESSIBILIDADE WCAG ── */
+/* Skip Link (WCAG 2.4.1 - Bypass Blocks) */
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    z-index: 999;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background: var(--verde-escuro);
+    color: var(--branco);
+    text-decoration: none;
+    z-index: 999;
+    font-weight: bold;
+}
+
+/* Focus Outline (WCAG 2.4.7 - Focus Visible) */
+*:focus-visible {
+    outline: 3px solid var(--verde);
+    outline-offset: 2px;
+}
+
+/* Melhorar foco em botões */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--verde);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px var(--branco), 0 0 0 5px rgba(29, 158, 117, 0.5);
+}
+
+/* Screen Reader Only (WCAG 4.1.2 - For assistive technologies) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 /* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; }
 

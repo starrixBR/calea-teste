@@ -1,5 +1,6 @@
 /* ══════════════════════════════════════════
    ACESSIBILIDADE — Aumentar Fonte e Modos Daltônicos
+   WCAG 2.1 AA/AAA Compliant
    ══════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,16 +11,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // ── ABRIR/FECHAR PAINEL ──
     btnAcessibilidade.addEventListener('click', () => {
         painelAcessibilidade.removeAttribute('hidden');
+        // Focar no primeiro elemento interativo do painel
+        setTimeout(() => btnFecharPainel.focus(), 100);
     });
     
     btnFecharPainel.addEventListener('click', () => {
         painelAcessibilidade.setAttribute('hidden', '');
+        btnAcessibilidade.focus();
     });
     
-    // Fechar ao clicar fora
+    // Fechar ao clicar fora (WCAG 2.5.2 Pointer Cancellation)
     painelAcessibilidade.addEventListener('click', (e) => {
         if (e.target === painelAcessibilidade) {
             painelAcessibilidade.setAttribute('hidden', '');
+            btnAcessibilidade.focus();
+        }
+    });
+    
+    // Fechar ao pressionar ESC (WCAG 2.1.1 Keyboard)
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !painelAcessibilidade.hasAttribute('hidden')) {
+            painelAcessibilidade.setAttribute('hidden', '');
+            btnAcessibilidade.focus();
         }
     });
 
@@ -34,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         currentFontSize = Math.max(80, Math.min(150, percentage)); // Limita entre 80% e 150%
         document.body.style.fontSize = (16 * currentFontSize / 100) + 'px';
         fontAtual.textContent = currentFontSize + '%';
+        
+        // Anunciar mudança para leitores de tela (WCAG 4.1.3 Status Messages)
+        announcerFontChange(currentFontSize);
         
         // Salvar preferência
         localStorage.setItem('font-size', currentFontSize);
@@ -50,6 +66,16 @@ document.addEventListener('DOMContentLoaded', function() {
     btnFontReset.addEventListener('click', () => {
         updateFontSize(100);
         localStorage.removeItem('font-size');
+    });
+    
+    // Suporte a teclado para botões de fonte
+    [btnFontMaior, btnFontMenor, btnFontReset].forEach(btn => {
+        btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                btn.click();
+            }
+        });
     });
 
     // Restaurar preferência salva
@@ -71,33 +97,88 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Remover classe ativo anterior
             document.body.classList.remove(`modo-${currentMode}`);
-            modoBtns.forEach(b => b.classList.remove('ativo'));
+            modoBtns.forEach(b => {
+                b.classList.remove('ativo');
+                b.setAttribute('aria-pressed', 'false');
+            });
             
             // Adicionar nova classe
-            if (novoModo !== 'normal') {
+            if (novoModo !== 'normal' && novoModo !== 'Padrão') {
                 document.body.classList.add(`modo-${novoModo}`);
             }
             btn.classList.add('ativo');
+            btn.setAttribute('aria-pressed', 'true');
             currentMode = novoModo;
+            
+            // Anunciar para leitores de tela
+            announcerModeChange(novoModo);
             
             // Salvar preferência
             localStorage.setItem('modo-cores', novoModo);
+        });
+        
+        // Suporte a teclado
+        btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                btn.click();
+            }
         });
     });
 
     // Restaurar preferência salva
     const savedMode = localStorage.getItem('modo-cores') || 'normal';
-    if (savedMode !== 'normal') {
+    if (savedMode !== 'normal' && savedMode !== 'Padrão') {
         const btnMode = document.querySelector(`[data-modo="${savedMode}"]`);
         if (btnMode) {
             btnMode.click();
         }
     }
 
+    // ── LEITOR DE TELA (WCAG 4.1.3 Status Messages) ──
+    function announcerFontChange(size) {
+        announceMessage(`Tamanho da fonte alterado para ${size}%`);
+    }
+    
+    function announcerModeChange(mode) {
+        const labels = {
+            'normal': 'Padrão',
+            'Padrão': 'Padrão',
+            'protanopia': 'Modo Protanopia',
+            'deuteranopia': 'Modo Deuteranopia',
+            'tritanopia': 'Modo Tritanopia'
+        };
+        announceMessage(`Modo de cores alterado para ${labels[mode] || mode}`);
+    }
+    
+    function announceMessage(message) {
+        // Criar div aria-live para anúncios
+        let announcer = document.getElementById('aria-announcer');
+        if (!announcer) {
+            announcer = document.createElement('div');
+            announcer.id = 'aria-announcer';
+            announcer.setAttribute('aria-live', 'polite');
+            announcer.setAttribute('aria-atomic', 'true');
+            announcer.style.position = 'absolute';
+            announcer.style.left = '-10000px';
+            announcer.style.width = '1px';
+            announcer.style.height = '1px';
+            announcer.style.overflow = 'hidden';
+            document.body.appendChild(announcer);
+        }
+        announcer.textContent = message;
+        // Limpar após 2 segundos
+        setTimeout(() => {
+            announcer.textContent = '';
+        }, 2000);
+    }
+
     // ── INJETAR FILTROS SVG PARA DALTONISMO ──
     function injetarFiltrosDaltonismo() {
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('style', 'display: none;');
+        svg.setAttribute('role', 'presentation');
+        svg.setAttribute('aria-hidden', 'true');
         svg.innerHTML = `
             <defs>
                 <!-- Protanopia (Daltonismo Vermelho-Verde) -->
