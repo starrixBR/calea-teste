@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALEA — Comunidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <h1><a href="index.html">CALEA</a></h1>
+        <button id="btn-acessibilidade" class="btn-acessibilidade" aria-label="Abrir painel de acessibilidade">
+            <img src="imagens/acessibilidade/acessibilidade_internacional.png" alt="Símbolo de acessibilidade" class="icon-acessibilidade">
+        </button>
+    </div>
+    <div class="hero-tag">Centro Acadêmico de Línguas Estrangeiras APLICADAS ao Multilinguismo e à Sociedade da Informação</div>
+</header>
+
+<!-- Painel de Acessibilidade -->
+<div id="painel-acessibilidade" class="painel-acessibilidade" hidden>
+    <div class="painel-conteudo">
+        <button class="btn-fechar" id="btn-fechar-painel" aria-label="Fechar painel">&times;</button>
+        <h3>Acessibilidade</h3>
+        
+        <!-- Controle de Tamanho de Fonte -->
+        <div class="acess-grupo">
+            <label>Tamanho da fonte:</label>
+            <div class="controle-fonte">
+                <button id="btn-font-menor" class="btn-font" title="Diminuir">A−</button>
+                <span id="font-atual" class="font-atual">100%</span>
+                <button id="btn-font-maior" class="btn-font" title="Aumentar">A+</button>
+                <button id="btn-font-reset" class="btn-reset" title="Restaurar padrão">Padrão</button>
+            </div>
+        </div>
+
+        <!-- Modos de Visão para Daltônicos -->
+        <div class="acess-grupo">
+            <label>Modo de cores:</label>
+            <div class="controle-cores">
+                <button id="modo-Padrão" class="modo-btn ativo" data-modo="Padrão">Padrão</button>
+                <button id="modo-protanopia" class="modo-btn" data-modo="protanopia" title="Daltonismo Vermelho-Verde">Protanopia</button>
+                <button id="modo-deuteranopia" class="modo-btn" data-modo="deuteranopia" title="Daltonismo Vermelho-Verde">Deuteranopia</button>
+                <button id="modo-tritanopia" class="modo-btn" data-modo="tritanopia" title="Daltonismo Azul-Amarelo">Tritanopia</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="sobre_o_curso.html">Sobre o Curso</a>
+        <a href="oportunidades.html">Oportunidades</a>
+        <a href="calea.html">Centro Acadêmico</a>
+        <a href="projetos_eventos.html">Projetos e Eventos</a>
+        <a href="egressos.html">Egressos</a>
+        <a href="comunidade.html" class="ativo">Comunidade</a>
+    </nav>
+
+    <main>
+        <h1>Comunidade LEA-MSI</h1>
+        <p>Conheça a rede de professores, alunos e parcerias que tornam o LEA-MSI um ambiente colaborativo, multicultural e conectado.</p>
+
+        <h2>Professores do curso</h2>
+    <p class="sec-desc">Lista de professores do LEA-MSI com links para o currículo Lattes.</p>
+
+
+
+<!-- GRADE DE PROFESSORES -->
+<div class="gestao-grid">
+
+    <a href="#modal-ab" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/AdrianaBarbosa.png" alt="Adriana Fernandes Barbosa" class="avatar-foto">
+        <h4>Adriana Fernandes Barbosa</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-aq" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/AlessandraMatiasQuerido.png" alt="Alessandra Matias Querido" class="avatar-foto">
+        <h4>Alessandra Matias Querido</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-am" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/AntonioMarcosMoreiraDaSilva.png" alt="Antônio Marcos Moreira da Silva" class="avatar-foto">
+        <h4>Antônio Marcos Moreira da Silva</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-ca" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/CesarioAlvimPereiraFilho.png" alt="Cesário Alvim Pereira Filho" class="avatar-foto">
+        <h4>Cesário Alvim Pereira Filho</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-ct" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/CharlesRochaTeixeira.png" alt="Charles Rocha Teixeira" class="avatar-foto">
+        <h4>Charles Rocha Teixeira</h4>
+        <br>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-cm" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/ClarissaPradoMarini.png" alt="Clarissa Prado Marini" class="avatar-foto">
+        <h4>Clarissa Prado Marini</h4>
+        <br>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-fa" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/FernandaAlencarPereira.png" alt="Fernanda Alencar Pereira" class="avatar-foto">
+        <h4>Fernanda Alencar Pereira</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-fm" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/FranciscoClaudioSampaioDeMenezes.png" alt="Francisco Cláudio Sampaio de Menezes" class="avatar-foto">
+        <h4>Francisco Cláudio Sampaio de Menezes</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-hv" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/HelenaSantiagoVigata.png" alt="Helena Santiago Vigata" class="avatar-foto">
+        <h4>Helena Santiago Vigata</h4>
+        <br>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-mc" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/MarcosDeCamposCarneiro.png" alt="Marcos de Campos Carneiro" class="avatar-foto">
+        <h4>Marcos de Campos Carneiro</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-sm" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/SusanaMartinezMartinez.png" alt="Susana Martínez Martínez" class="avatar-foto">
+        <h4>Susana Martínez Martínez</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-tb" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/ThiagoBlanchPires.png" alt="Thiago Blanch Pires" class="avatar-foto">
+        <h4>Thiago Blanch Pires</h4>
+        <br>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+    <a href="#modal-va" class="membro-card" style="text-decoration:none; color:inherit;">
+        <img src="imagens/professores/VirgilioPereiraDeAlmeida.png" alt="Virgílio Pereira de Almeida" class="avatar-foto">
+        <h4>Virgílio Pereira de Almeida</h4>
+        <span class="cargo">Ver perfil completo →</span>
+    </a>
+
+</div>
+
+<!-- MODAIS -->
+
+<div id="modal-ab" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <img src="imagens\professores\AdrianaBarbosa.png" alt="Adriana Fernandes Barbosa" class="avatar-foto-lg">
+            <div>
+                <h3 class="modal-nome">Adriana Fernandes Barbosa</h3>
+                <span class="modal-cargo">Professora colaboradora — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professora Adjunta de Língua Alemã no Departamento de Línguas Estrangeiras e Tradução da Universidade de Brasília.
+                 Doutora em Linguística Aplicada pela UFMG, com período sanduíche na Europa-Universität Viadrina Frankfurt/Oder 
+                 (bolsa CAPES/DAAD), mestre em Estudos Linguísticos pela UFMG e especialista em Teoria e Prática do Ensino de Alemão
+                  como Língua Estrangeira pela UFBA e Universität zu Kassel. Possui Bacharelado em Letras pela UFMG, com habilitação 
+                  em Alemão e Inglês. Pesquisa a multimodalidade na interação face a face e nas interações mediadas pela tecnologia, 
+                  a partir das perspectivas cognitiva, interacional e intercultural, na interface entre Linguística Cognitiva, Semiótica
+                   Social e Estudos dos Gestos.Já foi coordenadora administrativa do Programa Idiomas sem Fronteiras na UnB (2024-2026) 
+                   e coordenadora pedagógica do curso de alemão no PPE UnB Idiomas (2024-2025). Desde 2023 é especialista em língua alemã 
+                   credenciada à Rede Andifes-IsF, coordenando os cursos desse idioma na UnB e desenvolvendo componentes curriculares para o 
+                   curso de Especialização em Língua Alemã da Rede. Atua também como coordenadora regional da Associação de Professores de Alemão
+                    do Centro-Oeste e membro da diretoria da Associação Brasileira de Professores de Alemão (BraDLV).</p>
+        </div>
+        <div class="modal-links">
+            <a href="http://lattes.cnpq.br/3065127356052281" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:adriana.barbosa@unb.br" class="btn-email">adriana.barbosa@unb.br</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-aq" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/alessandra.jpg" -->
+            <!-- <img src="fotos/alessandra.jpg" alt="Alessandra Matias Querido" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">AQ</div>
+            <div>
+                <h3 class="modal-nome">Alessandra Matias Querido</h3>
+                <span class="modal-cargo">Professora Adjunta — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professora adjunta no curso de Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação (LEA-MSI) 
+            na Universidade de Brasília. Pós-doutorado em andamento na USP em Comunicação sobre Literatura, quadrinhos e 
+            intermidialidade. Pós-doutorado em Estudos da Tradução pela Universidade Federal de Santa Catarina. Doutorado
+             em Teoria Literária (2011), mestrado em Linguística Aplicada (2004) e bacharelado em Letras Tradução - Inglês (1999) 
+             pela Universidade de Brasília.</p>
+            <p>Entre os interesses de pesquisa estão os Estudos da Tradução, a Teoria Literária e a Literatura Comparada, principalmente relacionada à Literatura e outras artes com ênfase em histórias em quadrinhos. Como docente, atuou no ensino básico na Secretaria de Educação do Distrito Federal, na UnB como professora substituta no curso de Letras-Tradução por seis anos, e em instituições particulares (IESB e UCB).</p>
+            <p>Coordena os grupos de pesquisa QUADRITAL (Quadrinhos, Tradução, Acessibilidade e Linguagens) e LiterArtes (Literatura e outras Artes). O principal foco de pesquisa são adaptações literárias para histórias em quadrinhos e outras mídias, explorando Intermidialidade, Estudos Interartes, Estudos de Adaptação e Estudos da Tradução.</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/9582760816449975" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:alequerido@gmail.com" class="btn-email">alequerido@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-am" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/antonio.jpg" -->
+            <!-- <img src="fotos/antonio.jpg" alt="Antônio Marcos Moreira da Silva" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">AM</div>
+            <div>
+                <h3 class="modal-nome">Antônio Marcos Moreira da Silva</h3>
+                <span class="modal-cargo">Professor — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professor Associado da Instituto de Letras, Universidade de Brasília (UnB). vice-diretor do Centro de Estudos Avançados Multidisciplinares (CEAM/UnB),
+                 coordenador do Núcleo de Estudos Afro-brasileiros e professor do programa de pós-graduação em Direitos Humanos e Cidadania, também do CEAM/UnB. Senior 
+                 Fellow Professor na Universidade de Melbourne, Australia 2018-2019.Pós-doutor pela École Normale Supérieure (ITEM/CNRS/IMEC), Paris/Caen. Estudos doutorais
+                  na École des Hautes Études en Sciences Sociales (2002 - 2003); Doutor pela Universidade de São Paulo (USP). Nos últimos anos, dedica-se compreender o conceito
+                   de Sociedade de Informação, que culmina na noção de Colonização da Informação. Buscar entender o papel da informação e da comunicação na sociedade contemporânea.
+                    Sua pesquisa visa desconstruir o etnocentrismo, a colonização do saber, as invisíveis violências numa sociedade logocêntrica, falocêntrica, fonocêntrica. 
+                    Possui uma intensa atividade extensionista tendo, entre os anos de 2021 e 2023, organizado e participado de mais de 40 atividades de extensão, 
+                sejam projetos ou eventos, que visavam contribuir com a comunicação pública das questões de raça, gênero, igualdade e democracia no Brasil. </p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/6191585855165430" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:marcosmoreira@unb.br" class="btn-email">marcosmoreira@unb.br</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-ca" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/cesario.jpg" -->
+            <!-- <img src="fotos/cesario.jpg" alt="Cesário Alvim Pereira Filho" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">CA</div>
+            <div>
+                <h3 class="modal-nome">Cesário Alvim Pereira Filho</h3>
+                <span class="modal-cargo">Professor — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Doutor em Linguística pela UnB (2020). Mestre em Letras Neolatinas pela UFRJ (2003). Especialista em língua espanhola pela UFES (1997). 
+                Licenciado em Letras/Português pela UFES (1991). Tenho interesse em políticas linguísticas, planejamento linguístico e produção de materiais, 
+                como dicionários, gramáticas e glossários, envolvendo agências de fomento de línguas. Também me interessam a geopolítica, o discurso político
+                 sobre línguas, a representação de línguas, o multilinguismo/plurilinguismo e questões sociopolíticas e discursivas envolvendo a língua espanhola,
+                  a portuguesa e outras línguas, bem como o multilinguismo no ciberespaço. Além disso, tenho interesse em problematizações relacionadas a estudos lexicais,
+                   aquisição/aprendizagem de línguas estrangeiras em espaços multilíngues, língua estrangeira para fins específicos e a interface entre o português e
+                    o espanhol. Ao longo de minha trajetória, exerci diversas funções na gestão acadêmico-pedagógica, tais como coordenador de língua espanhola do Centro 
+                    de Línguas para a Comunidade/UFES, coordenador da área de línguas estrangeiras da UESC, vice coordenador do NUREH, subcoordenador-geral do UnBidiomas, 
+                    coordenador do Núcleo de Ensino e Pesquisa em Português para Estrangeiros (NEPPE/LET), coordenador do curso de bacharelado em Línguas Estrangeiras Aplicadas
+                     ao Multilinguismo e à Sociedade da Informação (LEA-MSI), 
+                chefe do Departamento de Línguas Estrangeiras e Tradução (LET) e, atualmente, diretor do Instituto de Letras (IL). </p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/1267243719297020" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:cesape@gmail.com" class="btn-email">cesape@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-ct" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/charles.jpg" -->
+            <!-- <img src="fotos/charles.jpg" alt="Charles Rocha Teixeira" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">CT</div>
+            <div>
+                <h3 class="modal-nome">Charles Rocha Teixeira</h3>
+                <span class="modal-cargo">Professor Adjunto — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Doutorado pelo Programa de Literatura e Teoria Literária (2020) da Universidade de Brasília (UnB), Mestrado em Linguística Aplicada pela Universidade 
+                Estadual do Ceará (2009) e Graduação em Letras Francês e Português e Literaturas francesa e portuguesa pela Universidade Estadual do Ceará (2005).
+                 Atualmente é : Professor Adjunto da Universidade de Brasília lotado no Instituto de Letras, Departamento de Línguas Estrangeiras e Tradução, na área
+                  de Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação (LEA-MSI). Tem experiência na área de Letras, com ênfase em Línguas
+                   Estrangeiras Modernas, atuando principalmente nos seguintes temas: tradução audiovisual (Audiodescrição, LSE), cinema, televisão, ideologia, cultura, bem como é Coordenador 
+                do Projeto de Extensão "Núcleo de Acessibilidade" e Chefe do Departamento de Línguas Estrangeiras e Tradução - LET</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/4928757305118743" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:charlesrt2006@gmail.com" class="btn-email">charlesrt2006@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-cm" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/clarissa.jpg" -->
+            <!-- <img src="fotos/clarissa.jpg" alt="Clarissa Prado Marini" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">CM</div>
+            <div>
+                <h3 class="modal-nome">Clarissa Prado Marini</h3>
+                <span class="modal-cargo">Professora — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professora de Língua Francesa e Terminologia do bacharelado em Línguas Estrangeiras Aplicadas LEA-MSI na Universidade de Brasília-UnB.Doutora em 
+                Estudos da Tradução - PGET, Universidade Federal de Santa Catarina - UFSC (2019). Período sanduíche na Universidade Sorbonne 
+                (Paris IV) de agosto/2018 a janeiro/2019.Mestra em Estudos da Tradução - POSTRAD, Universidade de Brasília - UnB.Bacharel em 
+                Letras-Tradução-Francês pela Universidade de Brasília - UnB.Áreas de interesse: Tradução, Terminologia e FLE.</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/4474411320594145" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:clarissamarini@gmail.com" class="btn-email">clarissamarini@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-fa" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/fernanda.jpg" -->
+            <!-- <img src="fotos/fernanda.jpg" alt="Fernanda Alencar Pereira" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">FA</div>
+            <div>
+                <h3 class="modal-nome">Fernanda Alencar Pereira</h3>
+                <span class="modal-cargo">Professora — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>É professora do curso Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação -
+                 LEA/MSI, da Universidade de Brasília. Possui Licenciatura em Letras Inglês pela Universidade de Brasília (2005) 
+                 e mestrado em Literatura de Língua Inglesa pela Université de Rennes II, França (2007). É doutora em Estudos literários -
+                  literatura comparada, em regime de cotutela entre a Universidade Federal de Minas Gerais - UFMG e a Université de Rennes II (2012).
+                   Realizou pesquisa pós-doutoral (2018) na University of Western Cape -
+                 UWC, África do Sul, sobre os ensaios de Lewis Nkosi que tratam da experiência do exílio. Fernanda dedica-se à pesquisa nas áreas: literaturas africanas,
+                  literatura comparada, narrativas de ficção especulativas, multilinguismo e tradução literária. </p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/6007880701572434" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:fapfernanda@gmail.com" class="btn-email">fapfernanda@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-fm" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/francisco.jpg" -->
+            <!-- <img src="fotos/francisco.jpg" alt="Francisco Cláudio Sampaio de Menezes" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">FM</div>
+            <div>
+                <h3 class="modal-nome">Francisco Cláudio Sampaio de Menezes</h3>
+                <span class="modal-cargo">Professor Emérito — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professor Emérito da Universidade de Brasília, Doutor em Ciência da Informação pela Universidade de Brasília e 
+                Mestre em Engenharia de Sistemas e Computação pela COPPE-UFRJ (Instituto Alberto Luiz Coimbra de Pós Graduação e 
+                Pesquisa de Engenharia). Por 20 anos, funcionário internacional da UNESCO - UNITED NATIONS EDUCATIONAL, SCIENTIFIC
+                 AND CULTURAL ORGANIZATION (Paris), exerceu atividade profissional em mais de 20 países. Tem experiência de ensino na área
+                  de Línguas Estrangeiras Aplicadas, Ciência da Computação e Ciência da Informação, programas para a sociedade da informação,
+                   inclusão de línguas no mundo digital, tratamento automático da língua, políticas de acesso à informação cientifica, bibliotecas 
+                   digitais, internacionalização de universidades, projetos para financiamento internacional e concepção e organização de conferencias
+                    internacionais, em particular no Sistemas das Nações Unidas. Foi Coordenador de Administração do IBICT, órgão do Ministério de Ciência e
+                     Tecnologia e Inovação, até setembro/2009 e professor da Universidade Federal do Ceará até Out/2010. É Professor Associado do Departamento 
+                     de Línguas Estrangeiras e Tradução (LET), do Instituto de Letras (IL) da UnB. Coordenou a criação e implantação do Bacharelado em Línguas 
+                     Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação (LEA-MSI), da Universidade de Brasília, do qual foi 
+                seu 1. Coordenador, de out/2010 a dez/2013. Coordenou a Cátedra UNESCO sobre "Políticas Linguísticas para o Multilinguismo" na UnB, de 2018 a 2022 </p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/0356163607813759" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:claudiomenezes@unb.br" class="btn-email">claudiomenezes@unb.br</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-hv" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/helena.jpg" -->
+            <!-- <img src="fotos/helena.jpg" alt="Helena Santiago Vigata" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">HV</div>
+            <div>
+                <h3 class="modal-nome">Helena Santiago Vigata</h3>
+                <span class="modal-cargo">Professora Associada  — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Doutora em Comunicação pela Universidade de Brasília (2016) com bolsa CAPES para a realização 
+                de estágio de Doutorado Sanduíche na Universidade Complutense de Madri (agosto de 2014-julho de 2015). 
+                Pós-doutorado (2020-2021) sobre a tradução da diferença linguística em textos audiovisuais (UnB). Mestre
+                 em Linguística Aplicada (2011) pela Universidade de Brasília (UnB). Possui graduação em Tradução e Interpretação (2001)
+                  pela Universitat Autònoma de Barcelona (UAB), onde também cursou os créditos do Mestrado em Tradução Audiovisual (2001 -
+                   créditos incorporados ao histórico de graduação). Foi professora-leitora de Espanhol MAEC-AECID na Licenciatura Letras-Espanhol
+                    da Universidade de Brasília (UnB), e atualmente ocupa o cargo de professora associada do Bacharelado em Línguas Estrangeiras Aplicadas ao 
+                    Multilinguismo e à Sociedade da Informação (LEA-MSI), na mesma universidade. De 2018 a 2025 atuou no Programa de Pós-Graduação em Estudos da 
+                    Tradução da Universidade de Brasília (POSTRAD). É líder do grupo de pesquisa Acesso Livre, cadastrado no diretório do CNPq e membro fundador do 
+                    NTAAI - Núcleo de Tecnologia Assistiva, Acessibilidade e Inovação. Em 2022, passou a integrar o GT de Tradução da Associação Nacional de
+                 Pós-Graduação e Pesquisa em Letras e Linguística (ANPOLL). Suas pesquisas focam principalmente em: tradução audiovisual e acessibilidade cultural.</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/9968961018763883" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:hsantiago@unb.br" class="btn-email">hsantiago@unb.br</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-mc" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/marcos.jpg" -->
+            <!-- <img src="fotos/marcos.jpg" alt="Marcos de Campos Carneiro" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">MC</div>
+            <div>
+                <h3 class="modal-nome">Marcos de Campos Carneiro</h3>
+                <span class="modal-cargo">Professor — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professor da Universidade de Brasília (UnB), vinculado ao Departamento de Línguas Estrangeiras e Tradução (LET) do Instituto de Letras (IL),
+                 onde integra o quadro permanente do curso de Bacharelado em Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação (LEA-MSI). 
+                 É bacharel em Letras Francês e licenciado em Letras Português, com ampla experiência docente no Brasil e no exterior. Possui o título de Master of Arts
+                  em Línguas Estrangeiras Aplicadas (LEA) pela Université Lumière Lyon 2 (França), com especialização em Lexicologia e Terminologia Multilíngues aplicadas à Tradução. 
+                  É doutor pelo Programa de Pós-Graduação em Estudos da Tradução (PGET) da Universidade Federal de Santa Catarina (UFSC), com atuação nas áreas de terminologia, 
+                  tradução jurídica e linguística de corpus. Atua no ensino da língua francesa e desenvolve pesquisas em tradução especializada, com ênfase na integração de tecnologias 
+                  digitais, corpora multilíngues e ferramentas de análise automatizada. Atualmente, cursa graduação em Direito no Instituto Brasileiro de Ensino, Desenvolvimento e
+                   Pesquisa (IDP) e realiza estágio pós-doutoral junto ao Programa de Pós-Graduação em Estudos da Tradução (Pos-Trad) 
+                da Universidade de Brasília (UnB), com pesquisa voltada à análise terminológica e tradutória de documentos jurídicos no âmbito do Direito Internacional.</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/4189312022390606" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:mdecampos@unb.br" class="btn-email">mdecampos@unb.br</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-sm" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/susana.jpg" -->
+            <!-- <img src="fotos/susana.jpg" alt="Susana Martínez Martínez" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">SM</div>
+            <div>
+                <h3 class="modal-nome">Susana Martínez Martínez</h3>
+                <span class="modal-cargo">Professora Adjunta — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professora Adjunta do bachelarado em Línguas Estrangeiras Aplicadas ao Multilinguismo e a Sociedade da Informação (LEA-MSI) na Universidade de Brasília (UnB).
+                 Possui graduação em Traducción e Interpretación - Universidad de Alicante (1999), mestrado em Género y Desarrollo - Universidad Complutense de Madrid
+                  (2005) e doutorado em Ciências Sociais - Estudos Comparados sobre as Américas pela UnB (2020). Trabalhou (2004-2012) no Fundo de Desenvolvimento das 
+                  Nações Unidas para a Mulher (UNIFEM) e na Entidade das Nações Unidas para a Igualdade de Gênero e o Empoderamento das Mulheres (ONUMULHERES). 
+                  Pesquisadora nos grupos Mobilang, GRIEG e LAEMI. Coordenadora do Projeto de Extensão Universitária Migrações e Fronteiras no Distrito Federal: a
+                   mediação linguística como garantia dos direitos humanos. Trabalha nas áreas de sociologia da linguagem, 
+                sociolinguística, gênero, feminismos, racismo, migrações internacionais, línguas indígenas.</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/5780998946017708" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:laresu@hotmail.com" class="btn-email">laresu@hotmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-tb" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/thiago.jpg" -->
+            <!-- <img src="fotos/thiago.jpg" alt="Thiago Blanch Pires" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">TB</div>
+            <div>
+                <h3 class="modal-nome">Thiago Blanch Pires</h3>
+                <span class="modal-cargo">Professor Associado — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>Professor associado do Departamento de Línguas Estrangeiras e Tradução (LET) e do Programa de Pós-Graduação em Linguística (PPGL) vinculados ao Instituto de Letras 
+                (IL) da Universidade de Brasília (UnB). É coordenador de Pesquisa e Inovação (PI) do Instituto de Letras da UnB. Foi coordenador do bacharelado em Línguas Estrangeiras 
+                Aplicadas ao Multilinguismo e à Sociedade da Informação (LEA-MSI) de março de 2018 a março de 2020. Atua no ensino da língua inglesa, nos estudos de corpora, e no 
+                tratamento automatizado das línguas naturais. Pós-doutor em Linguística Computacional no Programa de Pós-Graduação em Linguística da Universidade Federal do Ceará 
+                (UFC), atuando no desenvolvimento de uma proposta de livro didático para ensino de linguística computacional. Doutor em Gestão da Informação pelo Programa de
+                 Pós-Graduação em Ciência da Informação (PPGCinf) da Universidade de Brasília, com período de bolsa doutorado-sanduíche da CAPES na Universität Bremen, Alemanha,
+                  sob supervisão do prof. dr. John Bateman. Possui interesse de estudo em Linguística Computacional, Linguística de Corpus, e mais especificamente na construção
+                   de ferramentas e recursos para as línguas indígenas brasileiras. É lider do Grupo de Estudos em Linguística Computacional (GeLinC) certificado pela instituição
+                    e membro do grupo de pesquisa Computação e Linguagem Natural (CompLin). Membro da Sociedade Brasileira de Computação (SBC), Associação Brasileira de Linguística
+                     (ABRALIN) e Grupo de Estudos Linguísticos de São Paulo (GEL). Possui graduação e mestrado em Letras - Língua Inglesa e Literaturas pela Universidade Federal de
+                      Santa Catarina, sendo o mestrado realizado no Programa de Pós-Graduação em Inglês (PPGI), 
+                tendo como foco a Análise Textual na interface dos campos dos Estudos de Tradução baseados em Corpus e da Linguística Sistêmico-Funcional. </p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/9911777987987166" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:thiagocomaga@gmail.com" class="btn-email">thiagocomaga@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-va" class="prof-overlay">
+    <div class="prof-modal">
+        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <div class="modal-header">
+            <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/virgilio.jpg" -->
+            <!-- <img src="fotos/virgilio.jpg" alt="Virgílio Pereira de Almeida" class="avatar-foto-lg"> -->
+            <div class="avatar" style="width:56px; height:56px; font-size:1rem; flex-shrink:0;">VA</div>
+            <div>
+                <h3 class="modal-nome">Virgílio Pereira de Almeida</h3>
+                <span class="modal-cargo">Professor Adjunto — LEA-MSI / UnB</span>
+            </div>
+        </div>
+        <div class="modal-bio">
+            <p>é Doutor em Linguística pela Universidade de Brasília (2011), Mestre em Educação pela Framingham State College (2006) e licenciado em Letras pela UFMG (1991). 
+                Atualmente é professor adjunto da Universidade de Brasília, no bacharelado de Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação. Tem 
+                experiência na área de Educação, com ênfase em Ensino de Língua Estrangeira, atuando principalmente nas seguintes áreas: competência comunicativa, ensino de língua
+                 inglesa, multilinguismo e morfossintaxe do inglês. Entre 2019 e 2024,
+                 ocupou a direção da Secretaria de Assuntos Internacionais da Universidade de Brasília, representando a instituição junto a órgãos internacionais.</p>
+        </div>
+        <div class="modal-links">
+            <a href="https://lattes.cnpq.br/5592207745863438" target="_blank" class="btn-lattes">Lattes ↗</a>
+            <a href="mailto:virgilioalm@unb.br" class="btn-email">virgilioalm@unb.br</a>
+        </div>
+    </div>
+</div>
+</div>
+        </div>
+
+        <h2>Redes sociais de outros LEAs</h2>
+
+        <div class="lea-network">
+            <article class="lea-item">
+                <h3>Línguas Estrangeiras Aplicadas às Negociações Internacionais</h3>
+                <p class="lea-institution">Universidade Federal da Paraíba (UFPB)</p>
+                <p class="social-links">
+                    <a href="https://www.instagram.com/leaufpb/" target="_blank" class="btn-social">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                </p>
+            </article>
+
+            <article class="lea-item">
+                <h3>Línguas Estrangeiras Aplicadas às Negociações Internacionais</h3>
+                <p class="lea-institution">Universidade Estadual de Santa Cruz (UESC)</p>
+                <p class="social-links">
+                    <a href="https://www.instagram.com/caleauesc/" target="_blank" class="btn-social">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                </p>
+            </article>
+
+            <article class="lea-item">
+                <h3>Línguas Estrangeiras Aplicadas às Negociações Internacionais</h3>
+                <p class="lea-institution">Centro Federal de Educação Tecnológica (CEFET)</p>
+                <p class="social-links">
+                    <a href="https://www.instagram.com/ca.leani/" target="_blank" class="btn-social">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                </p>
+            </article>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p><strong>CALEA</strong> &mdash; Centro Acadêmico de Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação &mdash; UnB</p>
+    </footer>
+
+
+<script src="nav.js"></script>
+<script src="acessibilidade.js"></script>
+</body>
+</html>

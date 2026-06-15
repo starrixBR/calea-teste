@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALEA — Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1><a href="index.html">CALEA</a></h1>
+            <button id="btn-acessibilidade" class="btn-acessibilidade" aria-label="Abrir painel de acessibilidade">
+                <img src="imagens/acessibilidade/acessibilidade_internacional.png" alt="Símbolo de acessibilidade" class="icon-acessibilidade">
+            </button>
+        </div>
+        <div class="hero-tag">Centro Acadêmico de Línguas Estrangeiras APLICADAS ao Multilinguismo e à Sociedade da Informação</div>
+    </header>
+
+    <!-- Painel de Acessibilidade -->
+    <div id="painel-acessibilidade" class="painel-acessibilidade" hidden>
+        <div class="painel-conteudo">
+            <button class="btn-fechar" id="btn-fechar-painel" aria-label="Fechar painel">&times;</button>
+            <h3>Acessibilidade</h3>
+            
+            <!-- Controle de Tamanho de Fonte -->
+            <div class="acess-grupo">
+                <label>Tamanho da fonte:</label>
+                <div class="controle-fonte">
+                    <button id="btn-font-menor" class="btn-font" title="Diminuir">A−</button>
+                    <span id="font-atual" class="font-atual">100%</span>
+                    <button id="btn-font-maior" class="btn-font" title="Aumentar">A+</button>
+                    <button id="btn-font-reset" class="btn-reset" title="Restaurar padrão">Padrão</button>
+                </div>
+            </div>
+
+            <!-- Modos de Visão para Daltônicos -->
+            <div class="acess-grupo">
+                <label>Modo de cores:</label>
+                <div class="controle-cores">
+                    <button id="modo-Padrão" class="modo-btn ativo" data-modo="Padrão">Padrão</button>
+                    <button id="modo-protanopia" class="modo-btn" data-modo="protanopia" title="Daltonismo Vermelho-Verde">Protanopia</button>
+                    <button id="modo-deuteranopia" class="modo-btn" data-modo="deuteranopia" title="Daltonismo Vermelho-Verde">Deuteranopia</button>
+                    <button id="modo-tritanopia" class="modo-btn" data-modo="tritanopia" title="Daltonismo Azul-Amarelo">Tritanopia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="ativo">Página Inicial</a>
+        <a href="sobre_o_curso.html">Sobre o Curso</a>
+        <a href="oportunidades.html">Oportunidades</a>
+        <a href="calea.html">Centro Acadêmico</a>
+        <a href="projetos_eventos.html">Projetos e Eventos</a>
+        <a href="egressos.html">Egressos</a>
+        <a href="comunidade.html">Comunidade</a>
+    </nav>
+
+    <main>
+        <h1>Bem-vindos ao CALEA</h1>
+        <p>Este é um espaço de convivência, representação estudantil e troca de experiências entre 
+        pessoas interessadas em línguas, culturas, tecnologia e diversidade. Aqui você pode acompanhar
+         eventos, projetos, oportunidades acadêmicas e iniciativas do curso, além de fortalecer sua participação na comunidade LEA.</p>
+
+        <h2>Destaques</h2>
+        <p>Conteúdo sobre destaques e avisos importantes.</p>
+
+        <h2>Calendário acadêmico</h2>
+        <p class="sec-desc">
+            Datas importantes do semestre <strong>2026.1</strong> para a graduação.
+            <a href="https://saa.unb.br/wp-content/uploads/2026/02/2026_1_Calend_Ativ_Grad_27_02_2026.pdf" target="_blank">
+                Ver calendário completo (PDF) ↗
+            </a>
+        </p>
+
+        <div class="cal-periodo-grid">
+            <div class="cal-periodo">
+                <span class="cal-periodo-label">Início do período letivo</span>
+                <span class="cal-periodo-data">23 fev 2026</span>
+            </div>
+            <div class="cal-periodo">
+                <span class="cal-periodo-label">Início das aulas</span>
+                <span class="cal-periodo-data">16 mar 2026</span>
+            </div>
+            <div class="cal-periodo">
+                <span class="cal-periodo-label">Fim das aulas</span>
+                <span class="cal-periodo-data">18 jul 2026</span>
+            </div>
+            <div class="cal-periodo">
+                <span class="cal-periodo-label">Fim do período letivo</span>
+                <span class="cal-periodo-data">23 jul 2026</span>
+            </div>
+        </div>
+
+    </main>
+
+
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Dúvidas frequentes</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                    <p>bbbbbbbbb</p>
+                </details>
+                <details>
+                    <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                    <p>bbbbbbbbb</p>
+                </details>
+                <details>
+                    <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                    <p>bbbbbbbbb</p>
+                </details>
+                <details>
+                    <summary>aaaaaaaaaaaaaaaaaaaaa</summary>
+                    <p>bbbbbbbbb</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p><strong>CALEA</strong> &mdash; Centro Acadêmico de Línguas Estrangeiras Aplicadas ao Multilinguismo e à Sociedade da Informação &mdash; UnB</p>
+    </footer>
+<script src="nav.js"></script>
+<script src="acessibilidade.js"></script>
+</body>
+</html>
