@@ -3,75 +3,20 @@
    ══════════════════════════════════════════ */
 
 :root {
-    --verde: #0B7E56;
-    --verde-escuro: #054032;
-    --verde-claro: #E8F6F1;
-    --verde-medio: #2D8B6F;
-    --cinza-bg: #f5f6f3;
+    --verde: #1D9E75;
+    --verde-escuro: #085041;
+    --verde-claro: #E1F5EE;
+    --verde-medio: #5DCAA5;
+    --cinza-bg: #f4f5f2;
     --cinza-borda: #dde0da;
     --texto: #1a1a18;
-    --texto-muted: #3d3c38;
+    --texto-muted: #4a4946;
     --branco: #ffffff;
     --sombra-suave: 0 2px 12px rgba(8, 80, 65, 0.08);
     --sombra-media: 0 4px 24px rgba(8, 80, 65, 0.13);
     --raio: 14px;
     --raio-sm: 8px;
     --raio-pill: 999px;
-}
-
-/* ── ACESSIBILIDADE WCAG ── */
-/* Skip Link (WCAG 2.4.1 - Bypass Blocks) */
-.skip-link {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    z-index: 999;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-.skip-link:focus {
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    padding: 0.5rem 1rem;
-    background: var(--verde-escuro);
-    color: var(--branco);
-    text-decoration: none;
-    z-index: 999;
-    font-weight: bold;
-}
-
-/* Focus Outline (WCAG 2.4.7 - Focus Visible) */
-*:focus-visible {
-    outline: 3px solid var(--verde);
-    outline-offset: 2px;
-}
-
-/* Melhorar foco em botões */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-    outline: 3px solid var(--verde);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 1px var(--branco), 0 0 0 5px rgba(11, 126, 86, 0.5);
-}
-
-/* Screen Reader Only (WCAG 4.1.2 - For assistive technologies) */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
 }
 
 /* ── RESET & BASE ── */
@@ -131,14 +76,14 @@ h3 {
 p { margin: 0.5rem 0 1rem; color: var(--texto-muted); }
 
 /* ── LINKS ── */
-a { color: var(--verde); text-decoration: none; }
-a:hover { color: var(--verde-escuro); text-decoration: underline; }
+a { color: var(--verde-escuro); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /* ══════════════════════════════════════════
    HEADER
    ══════════════════════════════════════════ */
 header {
-    background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde) 60%, var(--verde-medio) 100%);
+    background: linear-gradient(135deg, #085041 0%, #1D9E75 60%, #5DCAA5 100%);
     color: #fff;
     padding: 2rem 2rem 1.75rem;
     text-align: center;
@@ -161,15 +106,15 @@ header h1 a:hover { color: rgba(255,255,255,0.8); text-decoration: none; }
 
 .hero-tag {
     display: inline-block;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(8,80,65,0.6);
+    border: 1px solid rgba(8,80,65,0.7);
     border-radius: 999px;
     padding: 0.3rem 1rem;
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.13em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.9);
+    color: #ffffff;
     line-height: 1.5;
 }
 
@@ -177,7 +122,7 @@ header h1 a:hover { color: rgba(255,255,255,0.8); text-decoration: none; }
    NAVEGAÇÃO
    ══════════════════════════════════════════ */
 nav {
-    background-color: var(--verde);
+    background-color: var(--verde-escuro);
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -248,7 +193,7 @@ nav.active .menu-toggle span:nth-child(3) {
 
 nav a,
 .dropbtn {
-    color: rgba(255,255,255,0.9);
+    color: #ffffff;
     text-decoration: none;
     padding: 0.85rem 1rem;
     display: inline-block;
@@ -316,7 +261,7 @@ nav a.ativo {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--verde);
+        background-color: var(--verde-escuro);
         flex-direction: column;
         gap: 0;
         max-height: 0;
@@ -409,7 +354,7 @@ nav a.ativo {
     font-weight: 600;
 }
 
-.lattes-link:hover { color: var(--verde-escuro); }
+.lattes-link:hover { text-decoration: underline; }
 
 /* ══════════════════════════════════════════
    BOTÕES SOCIAL / PDF
@@ -437,7 +382,7 @@ nav a.ativo {
     background: var(--verde);
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(11,126,86,0.25);
+    box-shadow: 0 4px 12px rgba(29,158,117,0.25);
     text-decoration: none;
 }
 
@@ -462,7 +407,7 @@ nav a.ativo {
     background: var(--verde);
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(11,126,86,0.25);
+    box-shadow: 0 4px 12px rgba(29,158,117,0.25);
     text-decoration: none;
 }
 
@@ -503,7 +448,7 @@ nav a.ativo {
 
 .faq-list details[open] {
     border-color: var(--verde-medio);
-    box-shadow: 0 0 0 3px rgba(11,126,86,0.08);
+    box-shadow: 0 0 0 3px rgba(29,158,117,0.08);
 }
 
 .faq-list summary {
@@ -578,11 +523,11 @@ nav a.ativo {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--verde);
+    color: var(--verde-escuro);
     margin-top: 0.3rem;
 }
 
-.duracao-sep { font-size: 2rem; color: var(--cinza-borda); font-weight: 300; }
+.duracao-sep { font-size: 2rem; color: var(--texto-muted); font-weight: 300; }
 
 /* ══════════════════════════════════════════
    ESTRUTURA CURRICULAR
@@ -625,7 +570,7 @@ nav a.ativo {
 
 .curriculo-card--destaque {
     border-color: var(--verde);
-    box-shadow: 0 0 0 3px rgba(11,126,86,0.15);
+    box-shadow: 0 0 0 3px rgba(29,158,117,0.15);
 }
 
 .curriculo-badge {
@@ -633,7 +578,7 @@ nav a.ativo {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background: var(--verde);
+    background: var(--verde-escuro);
     color: #fff;
     border-radius: var(--raio-pill);
     padding: 0.15rem 0.65rem;
@@ -642,7 +587,7 @@ nav a.ativo {
 
 .curriculo-codigo { font-size: 1.6rem; font-weight: 800; color: var(--verde-escuro); line-height: 1; }
 .curriculo-ano { font-size: 0.78rem; color: var(--texto-muted); margin-top: 0.3rem; }
-.curriculo-link { font-size: 0.78rem; font-weight: 600; color: var(--verde); margin-top: 0.75rem; }
+.curriculo-link { font-size: 0.78rem; font-weight: 600; color: var(--verde-escuro); margin-top: 0.75rem; }
 
 /* ══════════════════════════════════════════
    FLUXO SEMESTRAL
@@ -674,7 +619,7 @@ nav a.ativo {
     letter-spacing: 0.04em;
 }
 
-.fluxo-sem-header span { font-weight: 400; opacity: 0.8; }
+.fluxo-sem-header span { font-weight: 400; }
 
 .fluxo-sem ul { list-style: none; margin: 0; padding: 0.6rem 0.9rem; }
 
@@ -780,21 +725,21 @@ nav a.ativo {
     gap: 1.25rem;
     margin-bottom: 1.25rem;
     padding-bottom: 1.25rem;
-    border-bottom: 2px solid var(--verde-claro);
+    border-bottom: 2px solid #E1F5EE;
 }
-.modal-nome { margin: 0 0 0.2rem; font-size: 1.1rem; color: var(--verde-escuro); }
-.modal-cargo { font-size: 0.82rem; color: var(--verde); font-weight: 600; }
-.modal-bio { font-size: 0.9rem; color: var(--texto-muted); line-height: 1.75; margin-bottom: 1.25rem; }
+.modal-nome { margin: 0 0 0.2rem; font-size: 1.1rem; color: #085041; }
+.modal-cargo { font-size: 0.82rem; color: #1D9E75; font-weight: 600; }
+.modal-bio { font-size: 0.9rem; color: #5f5e5a; line-height: 1.75; margin-bottom: 1.25rem; }
 .modal-bio p { margin: 0 0 0.85rem; }
 .modal-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .btn-lattes {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border: 1.5px solid var(--verde);
+    border: 1.5px solid #1D9E75;
     border-radius: 999px;
-    background: var(--verde-claro);
-    color: var(--verde-escuro);
+    background: #E1F5EE;
+    color: #085041;
     font-size: 0.85rem;
     font-weight: 700;
     text-decoration: none;
@@ -803,10 +748,10 @@ nav a.ativo {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border: 1.5px solid var(--cinza-borda);
+    border: 1.5px solid #dde0da;
     border-radius: 999px;
-    background: var(--branco);
-    color: var(--verde-escuro);
+    background: #fff;
+    color: #085041;
     font-size: 0.85rem;
     font-weight: 700;
     text-decoration: none;
@@ -816,14 +761,14 @@ nav a.ativo {
     top: 1rem;
     right: 1rem;
     background: none;
-    border: 1px solid var(--cinza-borda);
+    border: 1px solid #dde0da;
     border-radius: 8px;
     padding: 0.3rem 0.75rem;
     font-size: 0.85rem;
-    color: var(--texto-muted);
+    color: #5f5e5a;
     text-decoration: none;
 }
-.btn-fechar:hover { background: var(--cinza-bg); color: var(--verde-escuro); text-decoration: none; }
+.btn-fechar:hover { background: #f4f5f2; color: #085041; text-decoration: none; }
 .membro-card { cursor: pointer; }
 
 /* ── REDE DE LEAS ── */
@@ -835,24 +780,24 @@ nav a.ativo {
 }
 .lea-item {
     padding: 1.25rem;
-    border: 1px solid var(--verde-claro);
+    border: 1px solid #E1F5EE;
     border-radius: 10px;
     background: #f8fdf9;
     transition: all 0.3s ease;
 }
 .lea-item:hover {
-    border-color: var(--verde);
-    box-shadow: 0 4px 12px rgba(11, 126, 86, 0.15);
+    border-color: #1D9E75;
+    box-shadow: 0 4px 12px rgba(29, 158, 117, 0.12);
 }
 .lea-item h3 {
     font-size: 0.95rem;
-    color: var(--verde-escuro);
+    color: #085041;
     margin: 0 0 0.5rem;
     font-weight: 700;
 }
 .lea-institution {
     font-size: 0.85rem;
-    color: var(--texto-muted);
+    color: #5f5e5a;
     margin: 0 0 0.75rem;
     font-weight: 600;
 }
@@ -883,7 +828,7 @@ nav a.ativo {
    ══════════════════════════════════════════ */
 footer {
     background: var(--verde-escuro);
-    color: rgba(255,255,255,0.95);
+    color: rgba(255,255,255,0.85);
     text-align: center;
     padding: 2rem 1.5rem;
     font-size: 0.85rem;
@@ -891,10 +836,10 @@ footer {
 }
 
 footer strong { color: #fff; }
-footer p { margin: 0.3rem 0; color: rgba(255,255,255,0.95); }
+footer p { margin: 0.3rem 0; color: rgba(255,255,255,0.85); }
 
-.footer-creditos { font-size: 0.75rem; margin-top: 0.5rem !important; }
-.footer-creditos a { color: rgba(255,255,255,0.9); text-decoration: underline; font-weight: 600; }
+.footer-creditos { font-size: 0.75rem; opacity: 0.6; margin-top: 0.5rem !important; }
+.footer-creditos a { color: var(--verde-medio); text-decoration: underline; }
 .footer-creditos a:hover { color: #fff; }
 
 /* ══════════════════════════════════════════
@@ -989,7 +934,7 @@ footer p { margin: 0.3rem 0; color: rgba(255,255,255,0.95); }
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
-    color: var(--texto-muted);
+    color: #5f5e5a;
     padding: 0;
     width: 32px;
     height: 32px;
@@ -1005,10 +950,12 @@ footer p { margin: 0.3rem 0; color: rgba(255,255,255,0.95); }
     color: #000;
 }
 
-.painel-acessibilidade h3 {
+.painel-acessibilidade h2 {
     margin: 0 0 1.5rem 0;
     color: var(--verde-escuro);
     font-size: 1.2rem;
+    border: none;
+    padding: 0;
 }
 
 .acess-grupo {
@@ -1150,4 +1097,3 @@ body.font-150 { font-size: 24px; }
     .duracao-container { justify-content: center; }
     .curriculo-grid { justify-content: center; }
 }
-

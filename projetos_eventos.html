@@ -8,10 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
 </head>
 <body>
-    <!-- Skip Link (WCAG 2.4.1) -->
-    <a href="#conteudo-principal" class="skip-link">Pular para conteúdo principal</a>
-
-    <header role="banner">
+    <header>
     <div class="header-top">
         <h1><a href="index.html">CALEA</a></h1>
         <button id="btn-acessibilidade" class="btn-acessibilidade" aria-label="Abrir painel de acessibilidade">
@@ -22,32 +19,30 @@
     </header>
 
     <!-- Painel de Acessibilidade -->
-    <div id="painel-acessibilidade" class="painel-acessibilidade" hidden role="dialog" aria-labelledby="titulo-painel" aria-modal="true">
+    <div id="painel-acessibilidade" class="painel-acessibilidade" hidden>
         <div class="painel-conteudo">
-            <button class="btn-fechar" id="btn-fechar-painel" aria-label="Fechar painel (ESC)">&times;</button>
-            <h3 id="titulo-painel">Acessibilidade</h3>
+            <button class="btn-fechar" id="btn-fechar-painel" aria-label="Fechar painel">&times;</button>
+            <h2>Acessibilidade</h2>
             
             <!-- Controle de Tamanho de Fonte -->
             <div class="acess-grupo">
-                <label for="controle-fonte-group"><strong>Tamanho da fonte:</strong></label>
-                <div class="controle-fonte" id="controle-fonte-group" role="group" aria-labelledby="label-fonte">
-                    <span id="label-fonte" class="sr-only">Controles de tamanho de fonte</span>
-                    <button id="btn-font-menor" class="btn-font" title="Diminuir fonte (A-)" aria-label="Diminuir fonte">A−</button>
-                    <span id="font-atual" class="font-atual" aria-live="polite" aria-label="Tamanho atual">100%</span>
-                    <button id="btn-font-maior" class="btn-font" title="Aumentar fonte (A+)" aria-label="Aumentar fonte">A+</button>
-                    <button id="btn-font-reset" class="btn-reset" title="Restaurar padrão" aria-label="Restaurar tamanho padrão">Padrão</button>
+                <label>Tamanho da fonte:</label>
+                <div class="controle-fonte">
+                    <button id="btn-font-menor" class="btn-font" title="Diminuir">A−</button>
+                    <span id="font-atual" class="font-atual">100%</span>
+                    <button id="btn-font-maior" class="btn-font" title="Aumentar">A+</button>
+                    <button id="btn-font-reset" class="btn-reset" title="Restaurar padrão">Padrão</button>
                 </div>
             </div>
 
             <!-- Modos de Visão para Daltônicos -->
             <div class="acess-grupo">
-                <label for="modo-colors-group"><strong>Modo de cores:</strong></label>
-                <div class="controle-cores" id="modo-colors-group" role="group" aria-labelledby="label-cores">
-                    <span id="label-cores" class="sr-only">Modos de visão de cores</span>
-                    <button id="modo-Padrão" class="modo-btn ativo" data-modo="Padrão" aria-pressed="true">Padrão</button>
-                    <button id="modo-protanopia" class="modo-btn" data-modo="protanopia" title="Daltonismo Vermelho-Verde" aria-pressed="false">Protanopia</button>
-                    <button id="modo-deuteranopia" class="modo-btn" data-modo="deuteranopia" title="Daltonismo Vermelho-Verde" aria-pressed="false">Deuteranopia</button>
-                    <button id="modo-tritanopia" class="modo-btn" data-modo="tritanopia" title="Daltonismo Azul-Amarelo" aria-pressed="false">Tritanopia</button>
+                <label>Modo de cores:</label>
+                <div class="controle-cores">
+                    <button id="modo-Padrão" class="modo-btn ativo" data-modo="Padrão">Padrão</button>
+                    <button id="modo-protanopia" class="modo-btn" data-modo="protanopia" title="Daltonismo Vermelho-Verde">Protanopia</button>
+                    <button id="modo-deuteranopia" class="modo-btn" data-modo="deuteranopia" title="Daltonismo Vermelho-Verde">Deuteranopia</button>
+                    <button id="modo-tritanopia" class="modo-btn" data-modo="tritanopia" title="Daltonismo Azul-Amarelo">Tritanopia</button>
                 </div>
             </div>
         </div>
@@ -63,7 +58,7 @@
         <a href="comunidade.html">Comunidade</a>
     </nav>
 
-    <main id="conteudo-principal" role="main">
+    <main>
         <h1>Projetos do CA</h1>
         <p>Conteúdo sobre projetos do CA.</p>
 
