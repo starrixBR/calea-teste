@@ -1097,3 +1097,49 @@ body.font-150 { font-size: 24px; }
     .duracao-container { justify-content: center; }
     .curriculo-grid { justify-content: center; }
 }
+
+
+/* ══════════════════════════════════════════
+   MODO ESCURO (index.html)
+   ══════════════════════════════════════════ */
+body.dark-mode {
+    --cinza-bg: #14181b;
+    --branco: #1f2428;
+    --cinza-borda: #313740;
+    --texto: #e9ebe8;
+    --texto-muted: #b9beb8;
+}
+
+body.dark-mode main h1,
+body.dark-mode main h2,
+body.dark-mode main h3,
+body.dark-mode main a,
+body.dark-mode .section-title,
+body.dark-mode .faq-list summary {
+    color: var(--verde-medio);
+}
+
+.dark-mode-toggle { display: flex; align-items: center; }
+
+.btn-darkmode {
+    background: var(--verde-claro);
+    border: 2px solid var(--verde-medio);
+    color: var(--verde-escuro);
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-darkmode:hover {
+    background: var(--verde-medio);
+    color: #fff;
+}
+
+.btn-darkmode[aria-pressed="true"] {
+    background: var(--verde-escuro);
+    color: #fff;
+    border-color: var(--verde-escuro);
+}
