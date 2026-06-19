@@ -10,13 +10,14 @@
     --cinza-bg: #f4f5f2;
     --cinza-borda: #dde0da;
     --texto: #1a1a18;
-    --texto-muted: #4a4946;
+    --texto-muted: #6f6d69;
     --branco: #ffffff;
     --sombra-suave: 0 2px 12px rgba(8, 80, 65, 0.08);
     --sombra-media: 0 4px 24px rgba(8, 80, 65, 0.13);
     --raio: 14px;
     --raio-sm: 8px;
     --raio-pill: 999px;
+    ;
 }
 
 /* ── RESET & BASE ── */
@@ -415,7 +416,7 @@ nav a.ativo {
    SEÇÃO FAQ
    ══════════════════════════════════════════ */
 #faq {
-    background: var(--branco);
+    background: var(--cinza-bg);
     border-top: 1px solid var(--cinza-borda);
     padding: 3rem 1.5rem;
 }
@@ -439,7 +440,7 @@ nav a.ativo {
 .faq-list { display: grid; gap: 0.6rem; }
 
 .faq-list details {
-    background: var(--cinza-bg);
+    background: var(--branco);
     border: 1px solid var(--cinza-borda);
     border-radius: var(--raio-sm);
     overflow: hidden;
