@@ -10,9 +10,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="imagens_favicons/favicon_io/favicon-16x16.png">
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Saltar para o conteúdo principal</a>
 <header>
     <div class="header-top">
-        <h1><a href="index.html">CALEA</a></h1>
+            <p class="site-title"><a href="index.html">CALEA</a></p>
         <button id="btn-acessibilidade" class="btn-acessibilidade" aria-label="Abrir painel de acessibilidade">
             <img src="imagens/acessibilidade/acessibilidade_internacional.png" alt="Símbolo de acessibilidade" class="icon-acessibilidade">
         </button>
@@ -38,7 +39,7 @@
         </div>
 
             <div class="acess-grupo">
-                <label>Modo escuro:</label>
+                <label></label>
                 <div class="dark-mode-toggle">
                     <button id="btn-darkmode" class="btn-darkmode" title="Ativar/Desativar modo escuro">Modo Escuro</button>
                 </div>
@@ -64,11 +65,10 @@
         <a href="oportunidades.html">Oportunidades</a>
         <a href="calea.html">Centro Acadêmico</a>
         <a href="projetos_eventos.html">Projetos e Eventos</a>
-        <a href="egressos.html">Egressos</a>
         <a href="comunidade.html" class="ativo">Comunidade</a>
     </nav>
 
-    <main>
+    <main id="main-content">
         <h1>Comunidade LEA-MSI</h1>
         <p>Conheça a rede de professores, alunos e parcerias que tornam o LEA-MSI um ambiente colaborativo, multicultural e conectado.</p>
 
@@ -78,89 +78,111 @@
 
 
 <!-- GRADE DE PROFESSORES -->
-<div class="gestao-grid">
+<div class="gestao-grid" role="list">
 
-    <a href="#modal-ab" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/AdrianaBarbosa.png" alt="Adriana Fernandes Barbosa" class="avatar-foto">
-        <h4>Adriana Fernandes Barbosa</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-ab" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/AdrianaBarbosa.png" alt="Adriana Fernandes Barbosa" class="avatar-foto">
+            <p class="membro-nome">Adriana Fernandes Barbosa</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-aq" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/AlessandraMatiasQuerido.png" alt="Alessandra Matias Querido" class="avatar-foto">
-        <h4>Alessandra Matias Querido</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-aq" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/AlessandraMatiasQuerido.png" alt="Alessandra Matias Querido" class="avatar-foto">
+            <p class="membro-nome">Alessandra Matias Querido</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-am" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/AntonioMarcosMoreiraDaSilva.png" alt="Antônio Marcos Moreira da Silva" class="avatar-foto">
-        <h4>Antônio Marcos Moreira da Silva</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-am" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/AntonioMarcosMoreiraDaSilva.png" alt="Antônio Marcos Moreira da Silva" class="avatar-foto">
+            <p class="membro-nome">Antônio Marcos Moreira da Silva</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-ca" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/CesarioAlvimPereiraFilho.png" alt="Cesário Alvim Pereira Filho" class="avatar-foto">
-        <h4>Cesário Alvim Pereira Filho</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-ca" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/CesarioAlvimPereiraFilho.png" alt="Cesário Alvim Pereira Filho" class="avatar-foto">
+            <p class="membro-nome">Cesário Alvim Pereira Filho</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-ct" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/CharlesRochaTeixeira.png" alt="Charles Rocha Teixeira" class="avatar-foto">
-        <h4>Charles Rocha Teixeira</h4>
-        <br>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-ct" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/CharlesRochaTeixeira.png" alt="Charles Rocha Teixeira" class="avatar-foto">
+            <p class="membro-nome">Charles Rocha Teixeira</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-cm" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/ClarissaPradoMarini.png" alt="Clarissa Prado Marini" class="avatar-foto">
-        <h4>Clarissa Prado Marini</h4>
-        <br>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-cm" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/ClarissaPradoMarini.png" alt="Clarissa Prado Marini" class="avatar-foto">
+            <p class="membro-nome">Clarissa Prado Marini</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-fa" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/FernandaAlencarPereira.png" alt="Fernanda Alencar Pereira" class="avatar-foto">
-        <h4>Fernanda Alencar Pereira</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-fa" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/FernandaAlencarPereira.png" alt="Fernanda Alencar Pereira" class="avatar-foto">
+            <p class="membro-nome">Fernanda Alencar Pereira</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-fm" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/FranciscoClaudioSampaioDeMenezes.png" alt="Francisco Cláudio Sampaio de Menezes" class="avatar-foto">
-        <h4>Francisco Cláudio Sampaio de Menezes</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-fm" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/FranciscoClaudioSampaioDeMenezes.png" alt="Francisco Cláudio Sampaio de Menezes" class="avatar-foto">
+            <p class="membro-nome">Francisco Cláudio Sampaio de Menezes</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-hv" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/HelenaSantiagoVigata.png" alt="Helena Santiago Vigata" class="avatar-foto">
-        <h4>Helena Santiago Vigata</h4>
-        <br>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-hv" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/HelenaSantiagoVigata.png" alt="Helena Santiago Vigata" class="avatar-foto">
+            <p class="membro-nome">Helena Santiago Vigata</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-mc" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/MarcosDeCamposCarneiro.png" alt="Marcos de Campos Carneiro" class="avatar-foto">
-        <h4>Marcos de Campos Carneiro</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-mc" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/MarcosDeCamposCarneiro.png" alt="Marcos de Campos Carneiro" class="avatar-foto">
+            <p class="membro-nome">Marcos de Campos Carneiro</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-sm" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/SusanaMartinezMartinez.png" alt="Susana Martínez Martínez" class="avatar-foto">
-        <h4>Susana Martínez Martínez</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-sm" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/SusanaMartinezMartinez.png" alt="Susana Martínez Martínez" class="avatar-foto">
+            <p class="membro-nome">Susana Martínez Martínez</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-tb" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/ThiagoBlanchPires.png" alt="Thiago Blanch Pires" class="avatar-foto">
-        <h4>Thiago Blanch Pires</h4>
-        <br>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-tb" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/ThiagoBlanchPires.png" alt="Thiago Blanch Pires" class="avatar-foto">
+            <p class="membro-nome">Thiago Blanch Pires</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
-    <a href="#modal-va" class="membro-card" style="text-decoration:none; color:inherit;">
-        <img src="imagens/professores/VirgilioPereiraDeAlmeida.png" alt="Virgílio Pereira de Almeida" class="avatar-foto">
-        <h4>Virgílio Pereira de Almeida</h4>
-        <span class="cargo">Ver perfil completo →</span>
-    </a>
+    <div role="listitem">
+        <a href="#modal-va" class="membro-card" style="text-decoration:none; color:inherit;">
+            <img src="imagens/professores/VirgilioPereiraDeAlmeida.png" alt="Virgílio Pereira de Almeida" class="avatar-foto">
+            <p class="membro-nome">Virgílio Pereira de Almeida</p>
+            <span class="cargo">Ver perfil completo →</span>
+        </a>
+    </div>
 
 </div>
 
@@ -168,7 +190,7 @@
 
 <div id="modal-ab" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <img src="imagens\professores\AdrianaBarbosa.png" alt="Adriana Fernandes Barbosa" class="avatar-foto-lg">
             <div>
@@ -198,7 +220,7 @@
 
 <div id="modal-aq" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/alessandra.jpg" -->
             <!-- <img src="fotos/alessandra.jpg" alt="Alessandra Matias Querido" class="avatar-foto-lg"> -->
@@ -226,7 +248,7 @@
 
 <div id="modal-am" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/antonio.jpg" -->
             <!-- <img src="fotos/antonio.jpg" alt="Antônio Marcos Moreira da Silva" class="avatar-foto-lg"> -->
@@ -255,7 +277,7 @@
 
 <div id="modal-ca" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/cesario.jpg" -->
             <!-- <img src="fotos/cesario.jpg" alt="Cesário Alvim Pereira Filho" class="avatar-foto-lg"> -->
@@ -287,7 +309,7 @@
 
 <div id="modal-ct" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/charles.jpg" -->
             <!-- <img src="fotos/charles.jpg" alt="Charles Rocha Teixeira" class="avatar-foto-lg"> -->
@@ -314,7 +336,7 @@
 
 <div id="modal-cm" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/clarissa.jpg" -->
             <!-- <img src="fotos/clarissa.jpg" alt="Clarissa Prado Marini" class="avatar-foto-lg"> -->
@@ -339,7 +361,7 @@
 
 <div id="modal-fa" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/fernanda.jpg" -->
             <!-- <img src="fotos/fernanda.jpg" alt="Fernanda Alencar Pereira" class="avatar-foto-lg"> -->
@@ -367,7 +389,7 @@
 
 <div id="modal-fm" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/francisco.jpg" -->
             <!-- <img src="fotos/francisco.jpg" alt="Francisco Cláudio Sampaio de Menezes" class="avatar-foto-lg"> -->
@@ -400,7 +422,7 @@
 
 <div id="modal-hv" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/helena.jpg" -->
             <!-- <img src="fotos/helena.jpg" alt="Helena Santiago Vigata" class="avatar-foto-lg"> -->
@@ -432,7 +454,7 @@
 
 <div id="modal-mc" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/marcos.jpg" -->
             <!-- <img src="fotos/marcos.jpg" alt="Marcos de Campos Carneiro" class="avatar-foto-lg"> -->
@@ -462,7 +484,7 @@
 
 <div id="modal-sm" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/susana.jpg" -->
             <!-- <img src="fotos/susana.jpg" alt="Susana Martínez Martínez" class="avatar-foto-lg"> -->
@@ -490,7 +512,7 @@
 
 <div id="modal-tb" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/thiago.jpg" -->
             <!-- <img src="fotos/thiago.jpg" alt="Thiago Blanch Pires" class="avatar-foto-lg"> -->
@@ -523,7 +545,7 @@
 
 <div id="modal-va" class="prof-overlay">
     <div class="prof-modal">
-        <a href="#" class="btn-fechar">✕ Fechar</a>
+        <a href="#" class="btn-fechar">✕</a>
         <div class="modal-header">
             <!-- FOTO: substitua o src pelo caminho da imagem, ex: "fotos/virgilio.jpg" -->
             <!-- <img src="fotos/virgilio.jpg" alt="Virgílio Pereira de Almeida" class="avatar-foto-lg"> -->
@@ -547,6 +569,25 @@
     </div>
 </div>
 </div>
+        <h2>Gestão do site</h2>
+
+<h3>Fundadores</h3>
+        <div class="gestao-grid" style="max-width:200px;">
+            <div class="membro-card">
+                <div class="avatar" style="margin:0 auto .75rem;">EMC</div>
+                <h4>Eduardo de Melo Cavalcante</h4>
+                <span class="cargo">Desenvolvedor</span><br>
+                <span class="cargo"><a href="http://lattes.cnpq.br/5332360719524152" target="_blank" class="lattes-link">Lattes↗</a></span>
+            </div>
+        </div>
+        <h3>Desenvolvedores atuais</h3>
+        <div class="gestao-grid" style="max-width:200px;">
+            <div class="membro-card">
+                <div class="avatar" style="margin:0 auto .75rem;">EMC</div>
+                <h4>Eduardo de Melo Cavalcante</h4>
+                <span class="cargo">Desenvolvedor</span><br>
+                <span class="cargo"><a href="http://lattes.cnpq.br/5332360719524152" target="_blank" class="lattes-link">Lattes↗</a></span>
+            </div>
         </div>
 
         <h2>Redes sociais de outros LEAs</h2>
